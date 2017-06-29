@@ -1,0 +1,5 @@
+<% 
+_.each(obj, function(e, i, a){ %>
+	<div data-json="<%-JSON.stringify(e) %>" class="swiper-slide"><img src="<%=e.image_name %>"></div>
+<% }) 
+%>
