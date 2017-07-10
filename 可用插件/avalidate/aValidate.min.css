@@ -1,0 +1,34 @@
+.validate-success {
+  background: url(images/success.png?base64) right center no-repeat !important;
+  background-size: auto 60% !important;
+}
+.validate-error {
+  background: url(images/error.png?base64) right center no-repeat #fff6f6 !important;
+  background-size: auto 60% !important;
+}
+.validate-loading {
+  background: url(images/loading.gif?base64) right center no-repeat !important;
+  background: 100% 100%;
+}
+.icon-ok-sign {
+  color: #49D272;
+}
+.icon-exclamation-sign {
+  color: #e23e18;
+}
+.validate-empty {
+  background: url(images/required.png?base64) right center no-repeat #fff6f6 !important;
+}
+.aValidate-result-container {
+  position: absolute;
+  z-index: 99999;
+}
+.aValidate-result {
+  color: red;
+  display: none;
+  font-size: 14px;
+  font-weight: normal;
+}
+.aValidate-result-show {
+  display: inline-block;
+}

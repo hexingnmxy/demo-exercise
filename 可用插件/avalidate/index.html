@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="aValidate.min.css">
+	<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+
+<div><input type="text" id='text'></div>
+<div id='xxxx'></div>
+<script src='../../publicfile/jquery.js'></script>	
+<script src='aValidate.min.js'></script>
+<script>
+	$('#text').aValidate({
+		empty:false,
+		maxLength:4,
+		minLength:4,
+		errorText:'xxx',
+		outputId:'xxxx',
+		onValidate:fu1
+	});
+	function fu1(e){
+		console.log(e)
+	}
+</script>
+</body>
+</html>

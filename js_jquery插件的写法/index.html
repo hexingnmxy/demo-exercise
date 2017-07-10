@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+</head>
+<body>
+
+	<script src='../publicfile/jquery.js'></script>
+	<script>	
+		(function($){
+			function Tab(){
+				//函数体内方法 初始化是立即执行
+        		this.init.apply(this, arguments); //用init函数初始化对象属性
+        	};
+        	Tab.prototype = {
+		       init: function(ele){
+		        	console.log($(ele)[0]);
+				    }
+			}
+			window.Tab = Tab;
+        }(jQuery)
+        ); 
+        var x = new Tab('body');
+    </script>
+</body>
+</html>		
