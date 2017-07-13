@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="result"></div>
+
+	<script id="theTmpl" type="text/x-jsrender">
+		<div>
+			Edit: <input type="checkbox" data-link="editable"/>
+			<em>Name:</em> {^{:name}}
+			{^{if showNickname && nickname}}
+			(Goes by <em data-link="nickname"></em>)
+			{{/if}}
+			{^{if editable}}
+			<div>
+				<input data-link="name"/>
+				<input data-link="nickname"/>
+				Show nickname: <input type="checkbox" data-link="showNickname"/>
+			</div>
+			{{/if}}
+		</div>
+	</script>
+
+
+	<script src='../../publicfile/jquery.js'></script>
+	<script src='jsviews.js'></script>
+	<script>
+		var data = [
+		{
+			"name": "Robert",
+			"nickname": "Bob",
+			"showNickname": true
+		},
+		{
+			"name": "Susan",
+			"nickname": "Sue",
+			"showNickname": false
+		}
+		];
+
+	var template = $.templates("#theTmpl");
+
+		template.link("#result", data);
+		
+	</script>
+</body>
+</html>

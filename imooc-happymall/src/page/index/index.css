@@ -1,0 +1,8 @@
+body{
+    /*background: url('../../image/xx.jpg') no-repeat;*/
+}
+.banner-container{
+    width:100%;
+    height: 500px;
+    display: block;
+}

@@ -1,0 +1,5 @@
+<% _.each(obj, function(e, i, a){ %>
+    <li class="nav-item <%- e.active? 'active':''%>">
+      <a class="link" href="<%=e.href%>"><%=e.desc%></a>
+     </li>
+    <% }) %>

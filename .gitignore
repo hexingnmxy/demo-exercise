@@ -1,1 +1,5 @@
 demo-for-webpack/node_modules/
+imooc-happymall/node_modules/
+imooc-happymall/dist/
+.idea/
+vue-cli-MPA/MPA-demo/node_modules/

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+	</style>
+</head>
+<body>
+	<script src='./jquery.js'></script>
+	<script>
+	//deferred使用详解
+	$.ajax({
+		type: "GET",
+		url: "./data.json",
+		dataType:'json'
+	})
+	.done(function(res){
+			// console.log(res);
+		})
+
+		 //deferred的when用法
+		 $.when(
+		 	$.ajax({
+		 		type: "GET",
+		 		url: "./data.json",
+		 		dataType:'json'
+		 	}), $.ajax({
+		 		type: "GET",
+		 		url: "./data1.json",
+		 		dataType:'json'
+		 	})).done(function(a1,  a2){
+		  // console.log(a1[0]);
+		  // console.log(a2[0]);
+		}).fail(function(){
+			console.log('fail')
+		});
+
+
+		//Deferred实际引用
+		var d1 = $.Deferred();
+		var d2 = $.Deferred();
+
+		$.when( d1, d2 ).done(function ( v1, v2 ) {
+		    console.log( v1 ); // "Fish"
+		    console.log( v2 ); // "Pizza"
+		});
+
+		d1.resolve( "Fish" );
+		d2.resolve( "Pizza" );
+
+		var dtd = $.Deferred(); // 新建一个deferred对象
+		var wait = function(dtd){
+			var tasks = function(){
+				console.log("执行完毕")
+		        dtd.resolve(); // 改变deferred对象的执行状态
+
+		    };
+		    setTimeout(tasks,1000);
+		    return dtd;
+		};
+		$.when(wait(dtd))
+		.done(function(){ console.log("成功了") })
+		.fail(function(){ console.log('失败了') });
+
+		var wait = function(dtd){
+	    var dtd = $.Deferred(); //在函数内部，新建一个Deferred对象
+	    var tasks = function(){
+	    	console.log('执行完毕2')
+	        dtd.resolve(); // 改变Deferred对象的执行状态
+	    };
+	    setTimeout(tasks,2000);
+	    return dtd.promise(); // 返回promise对象
+	};
+
+	$.when(wait())
+	.done(function(){ console.log("成功了1") })
+	.fail(function(){ console.log('失败了2') });
+
+
+	var defered = $.Deferred();
+	var promise1 = defered.then(function(data){
+		alert(data);//
+		return data+="1";
+	});
+
+	var promise2 = promise1.then(function(data){
+		alert(data);//1
+		return data+="2";
+	});
+
+	var promise3 = promise2.then(function(data){
+		alert(data);//12
+		return data+="3";
+	});
+
+	promise3.done(function(data){
+		alert(data);//123
+	});
+
+	defered.resolve("");
+
+
+	var defer = jQuery.Deferred();
+defer.done(function(a,b){
+            return a * b;
+}).done(function( result ) {
+            console.log("result = " + result);
+}).then(function( a, b ) {
+            return a * b;
+}).done(function( result ) {
+            console.log("result = " + result);
+}).then(function( a, b ) {
+            return a * b;
+}).done(function( result ) {
+            console.log("result = " + result);
+});
+defer.resolve( 2, 3 );
+</script>
+</body>
+</html>
