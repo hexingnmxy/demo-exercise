@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</head>
+<body>
+<!-- <div class='div1'>111</div>
+<div class='div2'>2222</div> -->
+<script src='../publicfile/jquery.js'></script>
+<script src='js_for_jquery.js'></script>
+<script>
+	function isObjectValueEqual(a, b) {
+    if(typeof a == 'number' && typeof b == 'number'){
+        return a == b
+    }
+ 
+ 
+    var aProps = Object.getOwnPropertyNames(a);
+    var bProps = Object.getOwnPropertyNames(b);
+ 
+    if (aProps.length != bProps.length) {
+        return false;
+    }
+ 
+    for (var i = 0; i < aProps.length; i++) {
+        var propName = aProps[i];
+        if(Object.prototype.toString(a[propName]) == '[Object Object]'||Object.prototype.toString(b[propName]) == '[Object Object]'){
+            isObjectValueEqual(a[propName],b[propName])
+        }
+        if (a[propName] !== b[propName]) {
+            return false;
+        }
+    }
+    return true;
+}
+	var x = isObjectValueEqual(4,3)
+	console.log(x)
+
+</script>
+</body>
+</html>
