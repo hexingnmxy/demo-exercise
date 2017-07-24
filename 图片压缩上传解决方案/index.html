@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</head>
+<body>
+
+<script src='jquery.js'></script>
+<script>
+	var formData = new FormData(),
+      oFile = $('#'+fileId)[0].files[0],
+      imgSize = oFile.size;
+
+      if(imgSize < 256 * 1024){
+            formData.append(fileId, oFile);
+            uploadPic(formData, picNum);
+        } else {    // 图片压缩处理
+            var reader   = new FileReader(),
+                maxWidth = 400,
+                maxHeight= 400,
+                suffix = oFile.name.substring(oFile.name.lastIndexOf('.') + 1);
+
+            if(imgSize > 2 * 1024 * 1024){
+                maxWidth = 800;
+                maxHeight= 800;   
+            }
+
+            reader.onload = function(e) {
+                var base64Img= e.target.result;
+                //--执行resize。
+                var _ir=ImageResizer({
+                    resizeMode:"auto",
+                    dataSource:base64Img,
+                    dataSourceType:"base64",
+                    maxWidth:maxWidth, //允许的最大宽度
+                    maxHeight:maxHeight, //允许的最大高度。
+                    onTmpImgGenerate:function(img){
+                    },
+                    success:function(resizeImgBase64,canvas){
+                        var blob = dataURLtoBlob(resizeImgBase64);
+                        formData.append(fileId, blob, oFile['name']);
+                    }
+                });
+            };
+            reader.readAsDataURL(oFile);
+        }
+</script>
+</body>
+</html>
