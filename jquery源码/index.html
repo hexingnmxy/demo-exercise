@@ -9,12 +9,24 @@
 	<meta name="full-screen" content="yes">
 	<meta name="x5-fullscreen" content="true">
 	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-	<link rel="stylesheet" type="text/css" href="E:\github\demo-exercise\publicfile\reset.css">
+	<!-- <link rel="stylesheet" type="text/css" href="E:\github\demo-exercise\publicfile\reset.css"> -->
 </head>
 <body>
+	<div></div>
+	<div></div>
 	<script type="text/javascript" src='jquery2.0.3.js'></script>
+	<script src='index.js'></script>
 	<script type="text/javascript">
-		
+		console.log()
+		$('div').append($('<span>',{id:'xx',html:'xxxx',title:'yy'}))
+		// var divx = document.getElementsByTagName('div')
+		var divx = $('div')
+		console.log(divx)
+		console.log($.makeArray(divx))
+		var x = $.makeArray(divx);
+		x.push('3')
+		console.log(['x'])
+
 	</script>
 </body>
 </html>

@@ -1,6 +1,5 @@
 import Koa from 'koa'
 import { Nuxt, Builder } from 'nuxt'
-// import routers from './middlewares/router'
 import R from 'ramda'
 import { resolve } from 'path'
 
@@ -9,7 +8,7 @@ import { resolve } from 'path'
 const r = path => resolve(__dirname,path)
 const host = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3006
-const middes = ['router']
+const middes = ['database','router']
 
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js')

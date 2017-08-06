@@ -16,10 +16,10 @@
 	console.log(isChineseChar('ad我'));
 	//匹配不以某字符开始
 	function nonBeginWith(str) {
-		var reg = /^(?!ab)[a-z]+$/;
+		var reg = /^(?!0+\d)+\d+(\.\d{1,2})?$/;
 		return reg.test(str);
 	}
-	console.log(nonBeginWith('ad'));
+	console.log(nonBeginWith('1111.11'));
 	</script>
 	</body>
 	</html>
