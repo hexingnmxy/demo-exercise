@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="format-detection" content="telphone=no, email=no"/>
+	<meta name="renderer" content="webkit">
+	<meta name="full-screen" content="yes">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<link rel="stylesheet" type="text/css" href="E:\github\demo-exercise\publicfile\reset.css">
+</head>
+<body>
+	<div id='test'>test</div>
+	<script type="text/javascript" src='E:\github\demo-exercise\publicfile\jquery.js'></script>
+	<script type="text/javascript">
+		var foo = {
+			name:"mingming",
+			logName:function(){
+				console.log(this.name);
+			}
+		}
+		var bar={
+			name:"xiaowang"
+		};
+		foo.logName.call(bar);//xiaowang
+
+		var obj = {
+			name: "John",
+			test: function() {
+				console.log( this.name );
+				$("#test").unbind("click", obj.test);
+			}
+		};
+
+
+		// $("#test").click( jQuery.proxy( obj, "test" ) );
+
+
+		var you = {
+			type: "person",
+			test: function(event) {
+				console.log(this.type);
+			}
+		}
+		$("#test").click($.proxy(you.test,you));
+
+		
+		function xx (a,b){
+
+		}
+		</script>
+	</body>
+	</html>
