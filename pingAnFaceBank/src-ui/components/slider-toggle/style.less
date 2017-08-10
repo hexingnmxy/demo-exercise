@@ -1,0 +1,20 @@
+@import "../../styles/_config";
+
+@sliderToggleBgColor          : @colorThird;
+
+.component-slider-toggle{
+  width: 30%;
+  height: 100%;
+  z-index: 60;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: @sliderToggleBgColor;
+  overflow: hidden;
+}
+.slider-toggle-enter-active,.slider-toggle-leave-active{
+  transition: all .3s;
+}
+.slider-toggle-enter,.slider-toggle-leave-active{
+   transform: translateX(100%);
+ }

@@ -1,0 +1,69 @@
+@import '../../styles/_config.less';
+
+@checkBoxButtonThemeColor : @colorFirst; // 主题颜色 checkbox主题色
+@checkboxButtonBorderColor: @colorTenth; // #999999 60%灰色 默认按钮边框颜色
+@checkBoxButtonDisabledColor: @colorEighth; // #cccccc 80%灰色 禁用颜色
+@checkBoxButtonGreenColor: @colorThirteenth; // 绿色
+@checkboxButtonDisabledBorderColor: @colorSixth; // #ebebeb 禁用边框颜色
+@checkBoxButtonDefaultFontColor: @colorEleventh; // #666666 默认文字颜色 40%灰色
+
+.checkbox-button-wrapper{
+  width: 1.2rem;
+  display: inline-block;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  position: relative;
+  text-align: center;
+  margin-right: .4rem;
+}
+
+.checkbox-button{
+  width: 100%;
+  height: 100%;
+  border: 1px solid @checkboxButtonBorderColor;
+  -webkit-appearance: none;
+  color: @checkBoxButtonGreenColor;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkbox-button:checked{
+  border-color: @checkBoxButtonGreenColor;
+  color: @checkBoxButtonGreenColor;
+}
+
+.checkbox-button:checked + span{
+  color: @checkBoxButtonGreenColor;
+}
+
+.checkbox-button-text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 18px;
+  cursor: pointer;
+  color: @checkBoxButtonDefaultFontColor;
+}
+
+.checkbox-button:disabled{
+  border-color: @checkBoxButtonDisabledColor;
+  cursor: not-allowed;
+}
+.checkbox-button:checked:disabled{
+  border-color: @checkboxButtonDisabledBorderColor;
+  color: @checkBoxButtonDisabledColor;
+}
+
+.checkbox-button-checked{
+  position: absolute;
+  right: -1px;
+  top: 10px;
+  color: @checkBoxButtonGreenColor;
+  display: none;
+}
+
+.checkbox-button:checked ~ .checkbox-button-checked{
+  display: block;
+  font-size: 18px;
+}

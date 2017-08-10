@@ -1,0 +1,56 @@
+@import '../../styles/_config.less';
+
+@checkboxBorderColor: @colorTenth; // #999999 60%灰色
+@checkBoxDisabledColor: @colorEighth; // #cccccc 80%灰色 禁用颜色
+@checkBoxGreenColor: @colorThirteenth; // 绿色
+@checkboxDisabledBorderColor: @colorSixth; // #ebebeb 禁用边框颜色
+@checkboxTextColor: @colorTwelfth; // #333333  20%灰色 checkbox 字体颜色
+
+.checkbox-wrapper{
+ display: flex;
+ margin-right: .4rem;
+}
+
+.checkbox{
+  width: .32rem;
+  height: .32rem;
+  margin-right: .2rem;
+  border: 1px solid @checkboxBorderColor;
+  -webkit-appearance: none;
+  vertical-align: middle;
+  color: @checkBoxGreenColor;
+  position: relative;
+  border-radius: 5px;
+}
+
+.checkbox-text{
+  line-height: .34rem;
+ font-size: 16px;
+ color: @checkboxTextColor;
+}
+
+.checkbox:checked:after{
+  font-family: @defaultIconName;
+  content: '\F229';
+  font-size: 0.18rem;
+  position: absolute;
+  top: 0;
+  height: .3rem;
+  line-height: .3rem;
+  width: .3rem;
+  text-align: center;
+  font-weight: bold;
+}
+.checkbox:disabled{
+  border-color: @checkBoxDisabledColor;
+  cursor: not-allowed;
+}
+
+.checkbox:disabled+span{
+  color: @checkBoxDisabledColor;
+}
+
+.checkbox:checked:disabled{
+  border-color: @checkboxDisabledBorderColor;
+  color: @checkBoxDisabledColor;
+}

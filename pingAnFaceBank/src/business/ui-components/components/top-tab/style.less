@@ -1,0 +1,27 @@
+@import '../../../../styles/config/_config';
+
+@topTabWhiteColor: @colorThird; // #ffffff
+@topTabGreenColor: @colorThirteenth;  // #51db3b;  //绿色
+
+.top-tab-wrapper{
+  background: @topTabWhiteColor;
+  height: .60rem;
+  line-height: .6rem;
+  width: 100%;
+  display: flex;
+  padding: 0 .3rem;
+  justify-content: space-between;
+}
+
+.top-tab-item{
+  color: #666666;
+  font-size: .2rem;
+  min-width: .7rem;
+  display: flex;
+  justify-content: center;
+}
+
+.top-tab-item.active{
+  color: @topTabGreenColor;
+  border-bottom: 3px solid @topTabGreenColor;
+}

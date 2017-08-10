@@ -1,0 +1,116 @@
+@import '../../styles/config/_config';
+
+@pageResultThemeColor: @colorFirst; // 主题颜色 主题色
+@pageResultWhiteColor: @colorThird; // #ffffff 背景颜色
+@pageResultGreenColor: @colorThirteenth; // 绿色
+@pageResultTextColor: @colorTwelfth; // #333333 98%灰色
+//@pageResultGrayColor: @colorEighth; // #cccccc 80%灰色
+
+.page-result-main{
+  width: 100%;
+  background: @pageResultWhiteColor;
+  flex-grow: 1;
+  flex-shrink: 1;
+  position: relative;
+}
+
+.page-result-left{
+  width: 61%;
+  flex-direction: column;
+  display: flex;
+}
+
+.page-result-right{
+  width: 37%;
+  margin-left: .2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-result-QRCode-wrap{
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  background: @pageResultWhiteColor;
+  padding: .15rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-result-QRCode{
+  width: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  flex-grow: 1;
+  padding-top: 80%;
+  margin: auto;
+  background-size: contain;
+}
+
+.page-result-card-wrap{
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: .15rem;
+  margin-top: .2rem;
+  background: @pageResultWhiteColor;
+  display: flex;
+}
+
+.page-result-card{
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  flex-grow: 1;
+  padding-top: 65%;
+}
+
+.page-result-btn{
+  position: absolute;
+  bottom: .2rem;
+  left: 43%;
+}
+
+.page-result-main-icon{
+  font-size: .75rem;
+  color: @pageResultGreenColor;
+  text-align: center;
+  margin-top: .45rem;
+}
+
+.page-result-main-text{
+  margin: .3rem 0 .5rem 0;
+  font-size: .25rem;
+  color: @pageResultTextColor;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.page-result-main-content-wrap{
+  width: 92%;
+  margin: auto;
+  font-size: .2rem;
+  line-height: 40px;
+  letter-spacing: 1.5px;
+}
+
+.page-result-main-content{
+  text-indent: 40px;
+}
+
+.page-result-main-content-num{
+  color: @pageResultThemeColor;
+}
+
+.page-result-QRCode-text{
+  font-size: .16rem;
+  line-height: 20px;
+  color: @pageResultTextColor;
+  margin: auto;
+  margin-top: .1rem;
+  width: 80%;
+}
+
+

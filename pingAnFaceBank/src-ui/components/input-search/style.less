@@ -1,0 +1,50 @@
+@import '../../styles/_config.less';
+
+@inputSearchThemeColor: @colorFirst; // 主题颜色 按钮主题色
+@inputSearchBorderColor: @colorTenth; // #999999 60%灰色 按钮边框颜色
+
+.input-search-wrap{
+    position: relative;
+}
+
+.order-search-input{
+  padding-left:.2rem;
+  padding-right:.52rem;
+  width: 100%;
+  height: .38rem;
+  font-size: .16rem;
+  border-radius: 19px;
+  border: none;
+  letter-spacing: 1.5px;
+}
+
+.order-search-input:focus{
+    border-color: @inputSearchThemeColor;
+}
+
+.order-search-i{
+    position: absolute;
+    top: 28%;
+    right: .18rem;
+    width: .3rem;
+}
+
+.order-search-i:after{
+    position: absolute;
+    font-family: @defaultIconName;
+    content: '\F240';
+    font-size: .23rem;
+    color:@inputSearchThemeColor;
+    font-style: normal;
+    width: 0.3rem;
+    text-align: center;
+}
+
+.order-search-i{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  transition:.2s all;
+}
+.order-search-i:active{
+  opacity: .8;
+  border-color: rgba(250,137,25,0.5);
+}

@@ -1,0 +1,54 @@
+@import "../../styles/_config";
+
+@popMinWidth      : 3rem;
+@popMinHeight     : 1.5rem;
+@popBtnListHeight : @sizeTwentyFirst;
+@popSpace         : @sizeSecond;
+
+.pop-box {
+  min-width: @popMinWidth;
+  min-height: @popMinHeight;
+  display: flex;
+  flex-direction: column;
+}
+.pop-content-wrapper{
+  flex: 1;
+  padding: @popSpace;
+  word-break: break-all;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.pop-btn-list{
+  flex: none;
+  height: @popBtnListHeight;
+  padding: 0 @popSpace;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.pop-btn-list button{
+  margin:0 .1rem;
+  white-space: nowrap;
+}
+.pop-btn-list button:last-child{
+  margin-right: 0;
+}
+.pop-btn-list button:first-child{
+  margin-left: 0;
+}
+.pop-icon{
+  text-align: center;
+  font-size: .4rem;
+}
+.pop-warn-icon:after{
+  content: '\f218';
+  font-family: @defaultIconName;
+  color: @colorThird;
+}
+.pop-error-icon:after{
+  content: '\f215';
+  font-family: @defaultIconName;
+  color: @colorThird;
+}

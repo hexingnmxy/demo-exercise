@@ -1,0 +1,54 @@
+@import '../../styles/_config.less';
+
+@radioThemeColor : @colorThirteenth; // #52b786 绿色 主题颜色 radio主题色
+@radioBorderColor:@colorTenth; // #999999 80%灰色 radio边框颜色
+@radioDisabledCheckedColor: @colorEighth; // #cccccc 80%灰色 radio禁用选中颜色
+@radioTextColor: @colorTwelfth;   //  #333333 20%灰色
+
+.radio-wrapper{
+  display: flex;
+  align-items: center;
+  margin-right: .8rem;
+}
+
+.radio-base{
+  width: .2rem;
+  height: .2rem;
+  border: 1px solid @radioBorderColor;
+  -webkit-appearance: none;
+  border-radius: 50%;
+  vertical-align: middle;
+  color: @radioThemeColor;
+  padding: 4px;
+}
+
+.radio-base:checked{
+    border-color: @radioThemeColor
+}
+
+.radio-base:checked:after{
+  content: '';
+  display: block;
+  height: 100%;
+  background: @radioThemeColor;
+  border-radius: 50%;
+  border-color: @radioThemeColor;
+}
+.radio-base:disabled{
+  border: 1px solid @radioDisabledCheckedColor;
+  cursor: not-allowed;
+}
+
+.radio-base:checked:disabled:after{
+  background: @radioDisabledCheckedColor;
+}
+
+.radio-base:disabled+span{
+  color: @radioDisabledCheckedColor;
+}
+
+.radio-text{
+  margin-left: .1rem;
+  font-size: .18rem;
+  color: @radioTextColor;
+}

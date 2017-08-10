@@ -1,0 +1,77 @@
+@import '../../styles/config/_config.less';
+
+@swipeCardThemeColor: @colorFirst; // 主题颜色 swipeCard 主题色
+@swipeCardWhiteColor: @colorThird; // #ffffff swipeCard 背景颜色
+@swipeCardStepIconColor:@colorEighth; // #cccccc 80%灰色 swipeCard 上一步左边三角图标颜色
+@swipeCardTitleColor:@colorTwelfth; // #333333 swipeCard 标题颜色
+@swipeCardTipColor:@colorTenth; // #999999 swipeCard 文字提示颜色
+
+.swipe-card-content{
+  margin: 0 .8rem;
+  height: 100%;
+  padding-bottom: 1rem;
+}
+.swipe-image{
+  transform: translateZ(0);
+}
+.swipe-card-bg{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  //justify-content: space-around;
+  align-items: center;
+}
+
+.re-swipe-btn{
+  float: right;
+  z-index: @layout;
+  margin: 0 .8rem .4rem 0;
+}
+
+.swipe-card-pop-content{
+  width: 7.76rem;
+  //height: 2.2rem;
+  height: 100%;
+  position: relative;
+}
+
+.swipe-card-pop-name{
+  color: @swipeCardTitleColor;
+  font-size: .2rem;
+  margin: .8rem 0 0 .8rem;
+  letter-spacing: 1.5px;
+}
+
+.swipe-card-pop-type{
+  color: @swipeCardTitleColor;
+  font-size: .2rem;
+  margin: .5rem 0 0 .8rem;
+  letter-spacing: 1.5px;
+}
+
+.swipe-card-pop-id{
+  color: @swipeCardTitleColor;
+  font-size: .2rem;
+  margin: .5rem 0 0 .8rem;
+  letter-spacing: 1.5px;
+}
+
+.swipe-card-pop-photo{
+  width: 1.4rem;
+  height: 1.78rem;
+  position: absolute;
+  right: .8rem;
+  top: 0;
+}
+.swipe-card-bg .image-show-box-transparent{
+  width: 45%;
+}
+.swipe-card-tips{
+  font-size: .18rem;
+  line-height: 18px;
+  color: @swipeCardTitleColor;
+  letter-spacing: 1px;
+}
+.swipe-card-highlight-tips{
+  color: @swipeCardThemeColor
+}

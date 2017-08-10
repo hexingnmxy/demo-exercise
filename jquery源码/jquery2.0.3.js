@@ -588,7 +588,6 @@ jQuery.extend({
 			if ( isArray ) {
 				for ( ; i < length; i++ ) {
 					value = callback.call( obj[ i ], i, obj[ i ] );
-
 					if ( value === false ) {
 						break;
 					}

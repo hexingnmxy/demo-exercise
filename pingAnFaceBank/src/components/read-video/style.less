@@ -1,0 +1,134 @@
+@import '../../styles/config/_config';
+
+@videoDivBackgroundColor: @colorThird;
+@videoIconFontSize: 1rem;
+@videoLineBackgroundColor: @colorEighth;
+
+.video-top{
+  flex: 1;
+  display: flex;
+  background: @videoDivBackgroundColor;
+  align-items: center;
+  padding: .8rem 0;
+}
+.video-customer{
+  flex: 1;
+  color: @colorThirteenth;
+  font-size: @videoIconFontSize;
+  height: @videoIconFontSize;
+  display: inline-block;
+  text-align: right;
+  position: relative;
+  &:after{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+.video-line-box{
+  flex: 1.2;
+  display: inline-block;
+  text-align: center;
+  margin: 0 .3rem;
+}
+.video-line{
+  width: 100%;
+  height: .02rem;
+  background-image: linear-gradient(to right,@colorThird 0%,@videoLineBackgroundColor 15%,@videoLineBackgroundColor 85%,@colorThird 100%);
+  display: inline-block;
+  position: relative;
+}
+.video-message{
+  display: inline-block;
+  margin-top: .1rem;
+  font-size: .22rem;
+}
+.video-person{
+  color: @colorThirteenth;
+}
+.video-server{
+  flex: 1;
+  color: @colorFirst;
+  font-size: @videoIconFontSize;
+  height: @videoIconFontSize;
+  display: inline-block;
+  text-align: left;
+  position: relative;
+  &:after{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+.video-tips{
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: .2rem;
+  background: @videoDivBackgroundColor;
+  text-align: center;
+}
+.video-tips > div{
+  text-align: left;
+  display: inline-block;
+  font-size: .2rem;
+  margin-right: 1rem;
+}
+.video-tips-icon{
+  color: @colorFirst;
+  font-size: .3rem;
+  margin-right: .2rem;
+  float: left;
+}
+.video-tips-margin{
+  line-height: .4rem;
+  height: .4rem;
+}
+.video-tips-margin + .video-tips-margin {
+  margin-top: .3rem;
+}
+@keyframes videoLineMoving {
+  from {width: 0;}
+  to {width: 100%;}
+}@keyframes videoLineItemMoving {
+   from {left: 0;}
+   to {left: 95%;}
+ }
+.video-line-active{
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  display: none;
+  background-image: linear-gradient(to right,@colorThird 0%,#52b786 15%,#52b786 85%,@colorThird 100%);
+}
+.video-move-line-item{
+  position: absolute;
+  z-index: 10;
+  width: .12rem;
+  height: .04rem;
+  border-radius: 100%;
+  border: 1px solid #fff;
+  top: -.01rem;
+  background: #fff;
+  box-shadow: 0 0 .1rem .02rem #52b786;
+  display: none;
+}
+.video-connecting .video-line-active{
+  display: inline-block;
+  animation: videoLineMoving 3s linear infinite;
+}
+.video-connecting .video-move-line-item{
+  display: inline-block;
+  animation: videoLineItemMoving 3s linear infinite;
+}
+.video-tips-box{
+  -webkit-box-flex: 1.2;
+  -ms-flex: 1.2;
+  flex: 1.2;
+  display: inline-block;
+  margin: 0 .3rem;
+}
+.video-tips-box .title-group-wrap{
+  padding: 0 .5rem;
+}
