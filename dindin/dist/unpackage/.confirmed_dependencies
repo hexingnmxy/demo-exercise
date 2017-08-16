@@ -1,0 +1,10 @@
+{
+	"index.html": {
+		"resources": [
+			"app.js",
+			"vuejs/app.js",
+			"js/mui.js",
+			"css/mui.css"
+		]
+	}
+}

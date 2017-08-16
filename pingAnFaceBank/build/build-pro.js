@@ -28,6 +28,7 @@ process.stdin.on('end', chunk => {
 	};
 	webpackConfig.output.path = path.resolve(`dist/business/${chunk}/`);
 	webpack(webpackConfig, function(error, status) {
+		console.log("123");
 		if (error) throw (error);
 		process.stdout.write(status.toString() + '\n');
 	});
