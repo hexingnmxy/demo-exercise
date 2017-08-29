@@ -1,0 +1,145 @@
+.clearfix(){
+  content:'';
+  display: block;
+  clear:both;
+}
+
+.center(@width,@height){
+    width: @width;
+    height: @height;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -(@height) / 2;
+    margin-left: -(@width) / 2;
+}
+
+.centerCSS(@width,@height){
+    width: @width;
+    height: @height;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+.centerFlex(){
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+.mLineClamp(@lines){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: @lines;
+    -webkit-box-orient: vertical;
+}
+
+.sLineClamp(@width){
+    display:inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: @width;
+}
+
+.outArrow (top,@basepx,@arrowpx,@color:#fff) {
+	width: 0;
+    height: 0;
+    border-left: @basepx solid transparent;
+    border-right: @basepx solid transparent;
+    border-bottom: @arrowpx solid @color;
+    position: absolute;
+    content: '';
+    top: -@arrowpx; 
+};
+
+.outArrow (bottom,@basepx,@arrowpx,@color:#fff) {
+    width: 0;
+    height: 0;
+    border-left: @basepx solid transparent;
+    border-right: @basepx solid transparent;
+    border-top: @arrowpx solid @color;
+    position: absolute;
+    content: '';
+    bottom: -@arrowpx;  
+};
+
+.outArrow (left,@basepx,@arrowpx,@color:#fff) {
+    width: 0;
+    height: 0;
+    border-top: @basepx solid transparent;
+    border-bottom: @basepx solid transparent;
+    border-right: @arrowpx solid @color;
+    position: absolute;
+    content: '';
+    left: -@arrowpx;   
+};
+
+.outArrow (right,@basepx,@arrowpx,@color:#fff) {
+    width: 0;
+    height: 0;
+    border-top: @basepx solid transparent;
+    border-bottom: @basepx solid transparent;
+    border-left: @arrowpx solid @color;
+    position: absolute;
+    content: '';
+    right: -@arrowpx;   
+};
+
+
+.innerArrow (top,@basepx,@arrowpx,@color:#fff) {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: @basepx solid transparent;
+    border-right: @basepx solid transparent;
+    border-top: @arrowpx solid @color; 
+};
+
+.innerArrow (bottom,@basepx,@arrowpx,@color:#fff) {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: @basepx solid transparent;
+    border-right: @basepx solid transparent;
+    border-bottom: @arrowpx solid @color;  
+};
+
+.innerArrow (left,@basepx,@arrowpx,@color:#fff) {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: @basepx solid transparent;
+    border-bottom: @basepx solid transparent;
+    border-left: @arrowpx solid @color;  
+};
+
+.innerArrow (right,@basepx,@arrowpx,@color:#fff) {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: @basepx solid transparent;
+    border-bottom: @basepx solid transparent;
+    border-right: @arrowpx solid @color;
+};
+
+
+
+
+
+

@@ -197,18 +197,36 @@
 					"app.js",
 					"vuejs/app.js",
 					"js/mui.js",
-					"css/mui.css"
+					"css/mui.css",
+					"js/jquery2.0.3.js"
+				],
+				"refer": [
+					"demo.html"
+				],
+				"priority": 0
+			},
+			"demo.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/sweetalert2.js",
+					"css/sweetalert2.css",
+					"js/jquery2.0.3.js",
+					"sweetalertdemo/sweetalert-master/dist/sweetalert.css",
+					"sweetalertdemo/sweetalert-master/dist/sweetalert.min.js",
+					"sweetalert-master/dist/sweetalert.min.js",
+					"sweetalert-master/dist/sweetalert.css",
+					"sweetalert2-master/dist/sweetalert2.css",
+					"sweetalert2-master/dist/sweetalert2.min.js",
+					"sweetalert2-master/dist/sweetalert2.js"
 				],
 				"refer": [],
 				"priority": 0
 			}
 		},
 		"idle": {
-			"resources": [
-				"js/mui.min.js",
-				"fonts/mui.ttf",
-				"css/mui.min.css"
-			]
+			"resources": []
 		}
 	}
 }

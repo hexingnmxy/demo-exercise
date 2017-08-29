@@ -1,0 +1,8 @@
+
+#app {
+  background-color: #F8F8F8;
+}
+#app > * {
+  color: #333333;
+  font-size: 1rem;
+}

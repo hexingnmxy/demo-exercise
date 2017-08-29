@@ -1,28 +1,28 @@
 <template>
   <div id="app">
-    <!-- <img src="./assets/logo.png"> -->
-    <hello></hello>
+  <i class="fa fa-trash-o fa-lg"></i>
+  <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+
 
 export default {
   name: 'app',
   components: {
-    Hello
+  
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avffsss', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 0px;
-}
+<style lang='less' rel="stylesheet/less">
+  @import 'assets/css/base.less';
+  #app{
+    background-color: @background-color;
+    >*{
+      color:@font-color;
+      font-size:1rem;
+    }
+  }
 </style>

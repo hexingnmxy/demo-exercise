@@ -1,8 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <img :src="src" style="width:100%;height:auto">
-    <h2 @click='plusCamera'>打开摄像头</h2>
+    <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
       <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
@@ -26,32 +25,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js 1111',
-      src:''
-    }
-  },
-  mounted:function(){
-  
-  },
-  methods:{
-    plusCamera:function(){
-      var _this = this;
-        var cmr = plus.camera.getCamera();
-        cmr.captureImage(function(p){
-          // outLine('成功：'+p);
-          // var src='file:///storage/emulated/0/Android/data/io.dcloud.HBuilder/.HBuilder/apps/HBuilder/';
-          // console.log(p);
-          plus.io.resolveLocalFileSystemURL(p, function(entry){
-            // createItem(entry);
-            console.log(entry);
-            _this.src = 'file:///'+entry.fullPath;
-            
-          }, function(e){
-            // outLine('读取拍照文件错误：'+e.message);
-          });
-        }, function(e){
-          // outLine('失败：'+e.message);
-        }, {filename:'_doc/camera/',index:1});
+      msg: 'Welcome to Your Vue.js App'
     }
   }
 }
