@@ -9,5 +9,6 @@ koa2-nuxt/build/
 pingAnFaceBank/node_modules/
 demo-webpack/node_modules/
 dindin/dindin-vue/node_modules/
+dindin/dist/
 vue-WeChat-master/node_modules/
 vue-music-master/node_modules/
