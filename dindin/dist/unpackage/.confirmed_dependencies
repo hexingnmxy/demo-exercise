@@ -5,7 +5,8 @@
 			"vuejs/app.js",
 			"js/mui.js",
 			"css/mui.css",
-			"js/jquery2.0.3.js"
+			"js/jquery2.0.3.js",
+			"vuecss/app.css"
 		],
 		"refer": [
 			"demo.html"
