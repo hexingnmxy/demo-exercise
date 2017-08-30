@@ -4,6 +4,7 @@ var config = require('../config')
 const vuxLoader = require('vux-loader')
 var vueLoaderConfig = require('./vue-loader.conf')
 var merge = require('webpack-merge')
+var webpack = require('webpack')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -30,11 +31,21 @@ const originalConfig = {
       'vue$': 'vue/dist/vue.common.js',
       'src': resolve('src'),
       'assets': resolve('src/assets'),
-      'components': resolve('src/components')
+      'components': resolve('src/components'),
+      'jquery': 'jquery',
+      'swal':'sweetalert2' 
     }
   },
+  // 增加一个plugins
+   plugins: [
+      new webpack.ProvidePlugin({
+          $: "jquery",
+          jQuery: "jquery",
+          swal:'swal'
+      })
+   ],
   externals: {
-        'jquery': 'window.jQuery'
+        // 'jquery': 'window.jQuery'
     },
   module: {
     rules: [

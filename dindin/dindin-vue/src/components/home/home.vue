@@ -6,13 +6,13 @@
 				<span class='bell-icon'><i class='fa fa-bell-o'></i><sup><badge :text="bellNo"></badge></sup></span>
 				<span class='search-icon'> <i class='fa fa-search'></i></span>
 			</span>
-
 		</div>
 	</div>
 </template>
 
 <script>
 	import { Badge } from 'vux';
+
 	export default {
 		data:function(){
 			return{
@@ -22,7 +22,10 @@
 		created:function(){
 		},
 		mounted:function(){
-			console.log($)
+			var _this = this;
+		},
+		methods:{
+
 		},
 		components: {
 			Badge,
