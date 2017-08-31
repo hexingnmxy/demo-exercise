@@ -10,7 +10,7 @@ CorePlugin.install = (Vue, options) => {
 		warning:function(text,callback){
 			swal({
 				title:text,
-				type:'warning',
+				type:'error',
 				confirmButtonColor:'#dc4b4b',
 				confirmButtonText: '确定',
 			}).then(function(){
