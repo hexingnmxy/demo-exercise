@@ -9,11 +9,15 @@ import fontAwesome from '../node_modules/font-awesome/css/font-awesome.css'
 import Swiper from 'assets/lib/swiper/swiper.js'
 import $ from 'jquery'
 import swal from 'sweetalert2'
-// import VueTouch from 'vue-touch'
+import API from './common/api.js'
+import CorePlugin from './common/public.js'
 var VueTouch = require('../node_modules/vue-touch/dist/vue-touch.js')
 
+//添加公共API接口;
+Vue.prototype.$API = API;
 
-Vue.use(VueTouch, {name: 'v-touch'})
+//添加公共方法接口;
+Vue.use(CorePlugin);
 
 //fastclick取消延迟300秒
 if('addEventListener' in document){

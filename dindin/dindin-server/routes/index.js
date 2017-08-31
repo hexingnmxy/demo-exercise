@@ -7,7 +7,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Expraaaass' });
 });
 
-
 router.get('/jdapi', function(req, res, next) {
 	var callback=req.query.callback;
 	var param = req.query.a;
@@ -84,9 +83,7 @@ router.get('/jdapi', function(req, res, next) {
 
 	var ret = JSON.stringify(data, null, 4);
  		ret =callback+"("+ret+")";
- 		res.send(ret);
-
-	
+ 		res.send(ret);	
 });
 
 
@@ -116,5 +113,23 @@ router.get('/api2', function(req, res, next) {
  		ret =callback+"("+ret+")";
  		res.send(ret);
 });
+
+
+//dindinAPI
+//首页数据
+router.get('/Homepage',function(req,res,next){
+	var callback=req.query.callback;
+		var data = Mock.mock({
+		"code":'0000',
+		"Homepage|4":[{
+		"questionTilte":'@ctitle',
+		"qusetionPseron":'@cname',
+		"qusetionIcon":"@image('450x250')"
+		}]
+	});
+	var ret = JSON.stringify(data, null, 4);
+ 		ret =callback+"("+ret+")";
+ 		res.send(ret);
+}),
 
 module.exports = router;
