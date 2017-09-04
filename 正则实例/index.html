@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="format-detection" content="telphone=no, email=no"/>
+	<meta name="renderer" content="webkit">
+	<meta name="full-screen" content="yes">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<link rel="stylesheet" type="text/css" href="E:\github\demo-exercise\publicfile\reset.css">
+	<style>
+		input{
+			width: 300px;
+			height: 30px;
+			display: block;
+			margin: 30px auto;
+			border: 1px solid lightgray;
+			border-radius: 5px;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" placeholder="中文姓名" id="cname_regex">
+	<input type="text" placeholder="英文姓名" id="ename_regex">
+	<script type="text/javascript" src='E:\github\demo-exercise\publicfile\jquery.js'></script>
+	<script>
+			//全角半角校验
+		function issbccase(strTmp) {
+		 for (var i=0; i<strTmp.length; i++) { 
+		  if (strTmp.charCodeAt(i) > 128){
+		   return true; 
+		   break; 
+		  }
+		 }
+		 return false;
+		}
+		//是否是中文英名
+		function isChineseName(str){
+			   var reg = /^(?!.*不详|.*不知道|.*未知)([A-Za-z.\u4e00-\u9fa5])+$/;
+			   return reg.test(str);
+			}
+
+		$('#cname_regex').on('input',function(){
+			
+			console.log(isChineseName($(this).val()));
+		})
+	</script>
+</body>
+</html>

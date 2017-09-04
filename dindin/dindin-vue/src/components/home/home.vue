@@ -19,12 +19,12 @@
 </template>
 
 <script>
-	import { Badge } from 'vux';
+	import {Group, Badge } from 'vux';
 
 	export default {
 		data:function(){
 			return{
-				bellNo:8,
+				bellNo:9,
 				homePageData:[],
 				imgLoaded:false //轮播图图片是否加载完成;
 			}
@@ -63,9 +63,6 @@
 		},
 		watch: {
 		    homePageData:function() {
-		        // setTimeout(() => {
-		        //   this.initSlideImg()
-		        // }, 20)
 		        this.$nextTick(function(){
 		        	this.initSlideImg()
 		        })

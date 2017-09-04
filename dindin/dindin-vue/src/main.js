@@ -16,6 +16,7 @@ var VueTouch = require('../node_modules/vue-touch/dist/vue-touch.js')
 //添加公共API接口;
 Vue.prototype.$API = API;
 
+
 //添加公共方法接口;
 Vue.use(CorePlugin);
 
