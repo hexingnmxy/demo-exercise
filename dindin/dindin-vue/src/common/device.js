@@ -11,6 +11,17 @@ const device = {
 			document.addEventListener("plusready",plusReady,false);
 		}
 	},
+	setStyle:function(obj){
+		// H5 plus事件处理
+		function plusReady(){
+			plus.webview.currentWebview().setStyle(obj);
+		}
+		if(window.plus){
+			plusReady();
+		}else{
+			document.addEventListener("plusready",plusReady,false);
+		}
+	},
 	getCamera:function(){
 		return new Promise ((resolve, reject) =>{
 			// H5 plus事件处理

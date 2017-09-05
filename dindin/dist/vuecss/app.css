@@ -3160,24 +3160,57 @@
   font-size: 1rem;
 }
 
-#home .header[data-v-5f6de9b9] {
+#bottom-nav-wrapper[data-v-50acfa71] {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+  background-color: white;
+  box-shadow: 0 -2px 10px lightgray;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+#bottom-nav-wrapper > div[data-v-50acfa71] {
+  color: #524d4d;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 25%;
+}
+#bottom-nav-wrapper > div > i[data-v-50acfa71] {
+  font-size: 1.7rem;
+  margin-bottom: 0.3rem;
+}
+#bottom-nav-wrapper > div > span[data-v-50acfa71] {
+  font-size: 1rem;
+}
+#bottom-nav-wrapper .router-link-exact-active[data-v-50acfa71] {
+  color: #52B7FE;
+}
+
+#home .page-header[data-v-5f6de9b9] {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  height: 4rem;
-  padding: 0 1rem;
   background-color: #F8F8F8;
 }
-#home .header .user-name[data-v-5f6de9b9] {
+#home .page-header .user-name[data-v-5f6de9b9] {
   font-weight: 700;
   letter-spacing: 1px;
   font-size: 1.4rem;
   color: #777575;
 }
-#home .header .icon-area[data-v-5f6de9b9] {
+#home .page-header .icon-area[data-v-5f6de9b9] {
   color: #52B7FE;
   display: -ms-flexbox;
   display: flex;
@@ -3186,16 +3219,16 @@
   -ms-flex-pack: justify;
       justify-content: space-between;
 }
-#home .header .icon-area .bell-icon[data-v-5f6de9b9],
-#home .header .icon-area .search-icon[data-v-5f6de9b9] {
+#home .page-header .icon-area .bell-icon[data-v-5f6de9b9],
+#home .page-header .icon-area .search-icon[data-v-5f6de9b9] {
   display: block;
   width: 2rem;
   height: 2rem;
   position: relative;
   margin-left: 0.8rem;
 }
-#home .header .icon-area .bell-icon > i[data-v-5f6de9b9],
-#home .header .icon-area .search-icon > i[data-v-5f6de9b9] {
+#home .page-header .icon-area .bell-icon > i[data-v-5f6de9b9],
+#home .page-header .icon-area .search-icon > i[data-v-5f6de9b9] {
   font-size: 1.5rem;
   position: absolute;
   top: 50%;
@@ -3203,16 +3236,25 @@
   transform: translate(-50%, -50%);
   z-index: 2;
 }
-#home .header .icon-area .bell-icon > sup[data-v-5f6de9b9],
-#home .header .icon-area .search-icon > sup[data-v-5f6de9b9] {
+#home .page-header .icon-area .bell-icon > sup[data-v-5f6de9b9],
+#home .page-header .icon-area .search-icon > sup[data-v-5f6de9b9] {
   position: absolute;
   top: -3px;
   right: -0.3rem;
   z-index: 1;
 }
+#home .silde-area[data-v-5f6de9b9] {
+  height: 200px;
+}
 #home .silde-area .slide-img[data-v-5f6de9b9] {
   width: 100%;
   height: 200px;
+}
+#home .module-part-wrapper[data-v-5f6de9b9] {
+  margin: 1rem 0rem;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  background-color: white;
 }
 /**
 * actionsheet
@@ -3610,4 +3652,51 @@
 .vux-badge-dot {
   height: auto;
   padding: 5px;
+}
+
+.base-group-wrapper[data-v-2d228482] {
+  padding: 0 1rem;
+  display: block;
+}
+
+.base-cart-wrapper .header[data-v-7572f167] {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+.base-cart-wrapper .header .module-name[data-v-7572f167] {
+  font-size: 1.3rem;
+  color: #333333;
+  font-weight: bold;
+}
+.base-cart-wrapper .header .wrapper-button[data-v-7572f167] {
+  font-size: 1.1rem;
+  color: #333333;
+  opacity: 0.5;
+}
+.base-cart-wrapper .module-part-wrapper[data-v-7572f167] {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.base-cart-wrapper .module-part-wrapper .module-detail[data-v-7572f167] {
+  width: 25%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-bottom: 1rem;
+}
+.base-cart-wrapper .module-part-wrapper .module-detail > img[data-v-7572f167] {
+  border-radius: 3px;
+  margin-bottom: 0.5rem;
 }

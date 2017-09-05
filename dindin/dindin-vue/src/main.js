@@ -29,6 +29,7 @@ if('addEventListener' in document){
 
 //公共css样式
 import './assets/css/reset.css';
+import './assets/css/common.css';
 import './assets/lib/swiper/swiper.css';
 import '../node_modules/sweetalert2/dist/sweetalert2.css'
 /* eslint-disable no-new */

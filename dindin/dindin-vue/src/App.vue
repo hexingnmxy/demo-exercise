@@ -4,15 +4,18 @@
       <keep-alive>
         <router-view name="default" ></router-view>
       </keep-alive>
+      <bottom-nav></bottom-nav>
     </section>
     <!--其他店内页集合 有过渡效果-->
     <transition name="custom-classes-transition" :enter-active-class="enterAnimate" :leave-active-class="leaveAnimate">
       <router-view name="subPage" class="sub-page"></router-view>
     </transition>
+
   </div>
 </template>
 
 <script>
+  import bottomNav from 'src/basecompoent/bottomNav/bottomNav.vue'
   export default {
     name: 'app',
     data:function(){
@@ -22,7 +25,7 @@
       }
     },
     components: {
-
+      bottomNav
     }
   }
 </script>

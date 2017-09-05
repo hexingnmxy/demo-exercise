@@ -124,7 +124,25 @@ router.get('/Homepage',function(req,res,next){
 		"Homepage|4":[{
 		"questionTilte":'@ctitle',
 		"qusetionPseron":'@cname',
-		"qusetionIcon":"@image('450x250')"
+		"qusetionIcon":"@image('450x200')"
+		}]
+	});
+	var ret = JSON.stringify(data, null, 4);
+ 		ret =callback+"("+ret+")";
+ 		res.send(ret);
+}),
+router.get('/moduleData',function(req,res,next){
+	var callback=req.query.callback;
+		var data = Mock.mock({
+		"code":'0000',
+		"modulepart|4":[{
+		'modulepartname':'@ctitle',
+		"moduledetail|3-8":[{
+			"moduledetailicon":"@image('50x50')",
+			"moduledetailname":'@cname',
+			"moduledetailID|7000-1000":8000
+		}],
+		"moduleID|2000-9000":4000
 		}]
 	});
 	var ret = JSON.stringify(data, null, 4);

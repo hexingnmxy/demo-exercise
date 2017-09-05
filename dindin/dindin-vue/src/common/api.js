@@ -1,7 +1,9 @@
 import config from './config.js'
 
 const API = {
-	Homepage: 'Homepage'
+	Homepage: 'Homepage',
+	moduledata:'moduledata'
+
 }
 
 

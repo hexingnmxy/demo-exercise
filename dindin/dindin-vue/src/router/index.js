@@ -7,7 +7,7 @@ Vue.use(Router);
 
 const routes = [
 	{ path: '/', redirect: { name: 'homeArea' } },
-	{
+	{	
 		path: '/home',
 		name: 'homeArea',
 		components: {
@@ -17,5 +17,6 @@ const routes = [
 	}]
 
 export default new Router({
+	linkActiveClass:'active',
 	routes
 })
