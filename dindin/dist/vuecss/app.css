@@ -3195,6 +3195,11 @@
   color: #52B7FE;
 }
 
+@media (max-width: 1600px) {
+#home[data-v-5f6de9b9] {
+    background-color: red;
+}
+}
 #home .page-header[data-v-5f6de9b9] {
   display: -ms-flexbox;
   display: flex;

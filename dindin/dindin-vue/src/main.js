@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router/index'
+import store from './store/index'
 import fastclick from 'fastclick'
 import axios from 'axios'
 import fontAwesome from '../node_modules/font-awesome/css/font-awesome.css'
@@ -36,6 +37,7 @@ import '../node_modules/sweetalert2/dist/sweetalert2.css'
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })

@@ -27,7 +27,7 @@
 	import {Group, Badge } from 'vux';
 	import baseGroup from 'src/basecompoent/group/group.vue';
 	import cartWrapper from 'src/basecompoent/cartWrapper/cartWrapper.vue';
-
+	import {mapState,mapGetters,mapMutations,mapActions} from 'vuex';
 
 	export default {
 		data:function(){
@@ -38,6 +38,20 @@
 				imgLoaded:false //轮播图图片是否加载完成;
 			}
 		},
+		computed:{
+			x:function(){
+				return this.bellNo;
+			},
+			...mapState({
+				count: state => state.x,
+				countPlusLocalState (state) {
+					return state.x + this.bellNo
+				}
+			}),
+			...mapGetters([
+				'doneTodos'
+				])
+		},
 		created:function(){
 			this.getHomeData();
 			this.getModuleData();
@@ -46,9 +60,15 @@
 			this.$nextTick(function(){
 				this.$core.setStyle({scrollIndicator:'none'});
 			})
-			
+
 		},
 		methods:{
+			...mapMutations([
+				'increment'
+				]),
+			...mapActions({
+				add: 'incrementx'
+			}),
 			getHomeData:function(){
 				this.$core.post(this.$API.Homepage,'',(res)=>{
 					this.homePageData = res.Homepage;
@@ -79,7 +99,7 @@
 			cartWrapper,
 			Badge,
 			baseGroup
-			
+
 		},
 		watch: {
 			homePageData:function() {
@@ -95,6 +115,10 @@
 	@import '~assets/css/base.less';
 	@import '~assets/css/_mixin.less';
 	#home{
+		@media (max-width: 1600px) {
+            background-color: red;
+            
+        }
 		.page-header{
 			display: flex;
 			align-items:center;
