@@ -103,6 +103,8 @@
 				>img{
 					border-radius: 3px;
 					margin-bottom: 0.5rem;
+					width:4rem;
+					height:4rem;
 				}
 			}
 		}

@@ -135,7 +135,7 @@ router.get('/moduleData',function(req,res,next){
 	var callback=req.query.callback;
 		var data = Mock.mock({
 		"code":'0000',
-		"modulepart|4":[{
+		"modulepart|18":[{
 		'modulepartname':'@ctitle',
 		"moduledetail|3-8":[{
 			"moduledetailicon":"@image('50x50')",

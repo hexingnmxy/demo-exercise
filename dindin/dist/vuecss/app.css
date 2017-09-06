@@ -3195,11 +3195,6 @@
   color: #52B7FE;
 }
 
-@media (max-width: 1600px) {
-#home[data-v-5f6de9b9] {
-    background-color: red;
-}
-}
 #home .page-header[data-v-5f6de9b9] {
   display: -ms-flexbox;
   display: flex;
@@ -3704,4 +3699,22 @@
 .base-cart-wrapper .module-part-wrapper .module-detail > img[data-v-7572f167] {
   border-radius: 3px;
   margin-bottom: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+#contact[data-v-4194b45b] {
+  position: relative;
+}
+#contact[data-v-4194b45b]:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#contact .scroll-wrapper[data-v-4194b45b] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 4rem;
 }

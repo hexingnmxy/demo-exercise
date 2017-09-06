@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <section class="app-content">
-      <keep-alive>
+      <!-- <keep-alive> -->
         <router-view name="default" ></router-view>
-      </keep-alive>
+      <!-- </keep-alive> -->
       <bottom-nav></bottom-nav>
     </section>
     <!--其他店内页集合 有过渡效果-->

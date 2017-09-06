@@ -115,10 +115,6 @@
 	@import '~assets/css/base.less';
 	@import '~assets/css/_mixin.less';
 	#home{
-		@media (max-width: 1600px) {
-            background-color: red;
-            
-        }
 		.page-header{
 			display: flex;
 			align-items:center;
