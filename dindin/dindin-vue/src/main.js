@@ -8,6 +8,7 @@ import fastclick from 'fastclick'
 import axios from 'axios'
 import fontAwesome from '../node_modules/font-awesome/css/font-awesome.css'
 import Swiper from 'assets/lib/swiper/swiper.js'
+import VueScroller from 'vue-scroller'
 import $ from 'jquery'
 import swal from 'sweetalert2'
 import API from './common/api.js'
@@ -17,6 +18,8 @@ var VueTouch = require('../node_modules/vue-touch/dist/vue-touch.js')
 //添加公共API接口;
 Vue.prototype.$API = API;
 
+//添加上拉加载组件
+Vue.use(VueScroller)
 
 //添加公共方法接口;
 Vue.use(CorePlugin);
@@ -24,7 +27,7 @@ Vue.use(CorePlugin);
 //fastclick取消延迟300秒
 if('addEventListener' in document){
 	document.addEventListener('DOMContentLoaded',function(){
-		// fastclick.attach(document.body)
+		fastclick.attach(document.body)
 	},false)
 }
 

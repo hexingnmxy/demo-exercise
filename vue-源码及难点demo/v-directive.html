@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="format-detection" content="telphone=no, email=no"/>
+	<meta name="renderer" content="webkit">
+	<meta name="full-screen" content="yes">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<link rel="stylesheet" type="text/css" href="E:\github\demo-exercise\publicfile\reset.css">
+</head>
+<body>
+	<div id='app'>
+		<p>{{ message }}</p>
+		<button @click='changeVal'>改变值</button>
+		<input v-cusdirective="{ color: 'white', text: 'hello!' }">
+		<div id="hook-arguments-example" v-demo:foo.a.b="message"></div>
+	</div>
+
+	<script src='../publicfile/vue2.4.2.js'></script>
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+				message: 111
+			},
+			methods:{
+				changeVal:function(){
+					this.message++
+				}
+			},
+			directives: {
+				focus: {
+				    // 当绑定元素插入到 DOM 中。
+				    inserted: function (el) {
+				    // 聚焦元素
+				    el.focus()
+				}
+			},
+			demo: {
+				bind: function (el, binding, vnode) {
+					var s = JSON.stringify
+					el.innerHTML =
+					'name: '       + s(binding.name) + '<br>' +
+					'value: '      + s(binding.value) + '<br>' +
+					'expression: ' + s(binding.expression) + '<br>' +
+					'argument: '   + s(binding.arg) + '<br>' +
+					'modifiers: '  + s(binding.modifiers) + '<br>' +
+					'vnode keys: ' + Object.keys(vnode).join(', ')
+				}
+			},
+			cusdirective:{
+				bind:function(el,binding){
+						console.log(binding.value.color) // => "white"
+  						console.log(binding.value.text)  // => "hello!"
+					},
+				
+				inserted : function(){
+				        
+				    }
+				//改变值时发生调用此钩子
+				update:function(el, binding){
+					console.log(binding.value.color) // => "white"
+						console.log(binding.value.text)  // => "hello!"
+					},
+				unbind:function(){
+			        //清理工作
+			        //例如，删除bind()添加的事件监听器
+				    }
+				}
+			}
+})
+</script>
+</body>
+</html>

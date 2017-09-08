@@ -1,6 +1,6 @@
 <template>
 	<div id='contact'>
-		<scroll class='scroll-wrapper' 
+		<!-- <scroll class='scroll-wrapper' 
 		:data='moduleData'
 		:listenScroll='true'
 		:pullup='true'
@@ -8,7 +8,12 @@
 		@scroll='listenOnSroll'
 		>
 		<div class='scroll-inner-wrapper'><cart-wrapper v-for='item in moduleData' :listData='item'></cart-wrapper></div>
-	</scroll>
+	</scroll> -->
+	<scroller 
+	:on-refresh="refresh"
+	:on-infinite="infinite" class='scroll-wrapper'>
+	<cart-wrapper v-for='item in moduleData' :listData='item'></cart-wrapper>
+</scroller>
 </div>
 
 </template>
@@ -36,6 +41,19 @@
 			},
 			listenOnSroll:function(res){
 				// console.log(res)
+			},
+			refresh:function(done){
+				setTimeout(()=>{
+					console.log(2222)
+					done()
+				},2000)
+			},
+			infinite:function(done){
+				setTimeout(()=>{
+					console.log(1111)
+					done(true)
+				},2000)
+				return;
 			}
 		},
 		components:{
@@ -49,7 +67,14 @@
 	@import '~assets/css/base.less';
 	@import '~assets/css/_mixin.less';
 	#contact{
-		position:relative;
+		.scroll-wrapper{
+			position:fixed;
+			top:0;
+			left:0;
+			right:0;
+			bottom:4rem;
+		}
+		
 		&:after{
 			.clearfix();
 		}
