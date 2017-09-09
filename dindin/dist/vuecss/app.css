@@ -3699,12 +3699,14 @@
 .base-cart-wrapper .module-part-wrapper .module-detail > img[data-v-7572f167] {
   border-radius: 3px;
   margin-bottom: 0.5rem;
-  width: 4rem;
-  height: 4rem;
 }
 
-#contact[data-v-4194b45b] {
-  position: relative;
+#contact .scroll-wrapper[data-v-4194b45b] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 4rem;
 }
 #contact[data-v-4194b45b]:after {
   content: '';
