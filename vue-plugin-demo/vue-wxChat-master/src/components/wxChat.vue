@@ -129,13 +129,13 @@
 
     .an-move-left{
         left: 0;
-        animation: moveLeft .7s ease;
-        -webkit-animation:moveLeft .7s ease; 
+/*         animation: moveLeft .7s ease;
+        -webkit-animation:moveLeft .7s ease;  */
     }
     .an-move-right{
         left: 0;
-        animation: moveRight .7s ease;
-        -webkit-animation:moveRight .7s ease; 
+/*         animation: moveRight .7s ease;
+        -webkit-animation:moveRight .7s ease;  */
     }
     .bgnone{
         background: none;
@@ -280,7 +280,7 @@
         data() {
             return {
                 isUpperLaoding: false,
-                isUnderLaoding: false,
+                isUnderLaoding: true,
 
                 isRefreshedAll: false,
                 isLoadedAll: false,

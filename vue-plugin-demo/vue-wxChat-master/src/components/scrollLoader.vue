@@ -78,9 +78,9 @@
             <slot></slot>
         </div>
 
-        <div class="loading" v-if="bottonLoading">
+        <!-- <div class="loading" v-if="bottonLoading">
             <div class="loader">加载中...</div>
-        </div>
+        </div> -->
     </div>
 </template>
 

@@ -9,8 +9,8 @@
   :getUnderData="getUnderData"
   :ownerAvatarUrl="ownerAvatarUrl"
   :contactAvatarUrl="contactAvatarUrl"
-  :maxHeight='667'
-  :width="375">
+  :maxHeight='568'
+  :width="320">
 </wxChat>
 </template>
 
