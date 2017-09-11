@@ -280,7 +280,7 @@
         data() {
             return {
                 isUpperLaoding: false,
-                isUnderLaoding: true,
+                isUnderLaoding: false,
 
                 isRefreshedAll: false,
                 isLoadedAll: false,
@@ -311,6 +311,7 @@
                 if(me.isUpperLaoding){
                     return;
                 }
+                console.log(2222)
 
                 if(me.isRefreshedAll){
                     done(true);
@@ -340,6 +341,8 @@
                 if(me.isUnderLaoding){
                     return;
                 }
+                 done(true);
+                 return;
                 if(me.isLoadedAll){
                     done(true);
                     me.isUnderLaoding = false;
