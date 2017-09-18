@@ -8,11 +8,11 @@
   		<i class='fa fa-user-circle-o'></i>
   		<span>联系人</span>
   	</router-link>
-  	<router-link :to='{name:"personalArea"}' tag='div'>
+  	<router-link :to='{name:"infoArea"}' tag='div'>
   		<i class='fa fa-commenting-o'></i>
   		<span>信息</span>
   	</router-link>
-  	<router-link :to='{name:"infoArea"}' tag='div'>
+  	<router-link :to='{name:"personalArea"}' tag='div'>
   		<i class='fa fa-bars'></i>
   		<span>我的</span>
   	</router-link>

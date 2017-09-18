@@ -44,13 +44,11 @@
 			},
 			refresh:function(done){
 				setTimeout(()=>{
-					console.log(2222)
 					done()
 				},2000)
 			},
 			infinite:function(done){
 				setTimeout(()=>{
-					console.log(1111)
 					done(true)
 				},2000)
 				return;

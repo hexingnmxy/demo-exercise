@@ -150,4 +150,20 @@ router.get('/moduleData',function(req,res,next){
  		res.send(ret);
 }),
 
+router.get('/msgData',function(req,res,next){
+	var callback=req.query.callback;
+		var data = Mock.mock({
+		"code":'0000',
+		"msglist|7-15":[{
+		'msgtitle':'@ctitle',
+		'msgword':'@csentence',
+		'msgtime':'@time("HH:mm")',
+		'msgicon|1-5':["@image('50x50')"]
+		}]
+	});
+	var ret = JSON.stringify(data, null, 4);
+ 		ret =callback+"("+ret+")";
+ 		res.send(ret);
+}),
+
 module.exports = router;
