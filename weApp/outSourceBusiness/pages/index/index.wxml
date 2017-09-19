@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='header'>
+       <view class='shadow-cover'>
+       <view>
+       <text class='title'>浅海科技</text>
+          <text class='sub-title'>专业软件产品设计开发</text>
+          <text class='sub-title'>技术服务提供商</text>
+          </view>
+       </view> 
+       <image class='home-bg' src='../../img/home-bg.jpg'></image> 
+  </view>
+  <text class="fa fa-wechat fa-lg"></text>
+</view>
