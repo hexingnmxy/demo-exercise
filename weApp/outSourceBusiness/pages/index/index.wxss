@@ -50,3 +50,23 @@
   border:none;
   font-size: 0;
 }
+.body{
+  margin-top: 30rpx;
+  width: 100%;
+  text-align: center;
+}
+.body .title{
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #F0F0F0;
+  font-size: 40rpx;
+  font-family: "Times New Roman";
+}
+.body .content{
+  display: block;
+  text-align: left;
+  font-size:32rpx;
+  margin:0 30rpx 40rpx;
+}

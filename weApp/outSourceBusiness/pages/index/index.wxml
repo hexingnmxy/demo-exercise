@@ -10,5 +10,9 @@
        </view> 
        <image class='home-bg' src='../../img/home-bg.jpg'></image> 
   </view>
-  <text class="fa fa-wechat fa-lg"></text>
+  <view class='body'>
+        <text class='title'>我们是谁</text>
+        <text class='content'>一家小而专的互联网技术公司,提供互联网相关技术咨询、产品设计和开发等服务，产品形态包括H5、微信、App、web系统等。</text>
+        <text class='content'>团队来自华为、腾讯、平安</text>
+  </view>
 </view>
