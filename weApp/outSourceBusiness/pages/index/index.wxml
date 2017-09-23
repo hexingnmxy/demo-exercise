@@ -10,9 +10,13 @@
        </view> 
        <image class='home-bg' src='../../img/home-bg.jpg'></image> 
   </view>
-  <view class='body'>
+  <view class='body-intro'>
         <text class='title'>我们是谁</text>
         <text class='content'>一家小而专的互联网技术公司,提供互联网相关技术咨询、产品设计和开发等服务，产品形态包括H5、微信、App、web系统等。</text>
-        <text class='content'>团队来自华为、腾讯、平安</text>
+        <text class='content'>团队来自华为、腾讯、平安等公司,通过我们专业的技术积累、标准化的流程和高质量的人才建立专业、靠谱、有品质、不一样的的服务。</text>
+  </view>
+  <view class='body-business-area'>
+          <text class='title'>业务范围</text>
+          <text class='sub-title'>打造精品软件和服务</text>
   </view>
 </view>

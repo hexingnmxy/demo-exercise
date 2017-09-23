@@ -3,6 +3,7 @@
   height: 100%;
   padding: 0;
   margin: 0;
+  background-color: #FAFAFA;
 }
 .header{
   width:100%;
@@ -50,23 +51,42 @@
   border:none;
   font-size: 0;
 }
-.body{
+.body-intro,.body-business-area{
   margin-top: 30rpx;
   width: 100%;
   text-align: center;
+
 }
-.body .title{
+.body-intro .title,.body-business-area .title{
   margin: 0 auto;
   display: inline-block;
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
   border-bottom: 1px solid #F0F0F0;
   font-size: 40rpx;
   font-family: "Times New Roman";
 }
-.body .content{
+.body-intro .content{
   display: block;
   text-align: left;
   font-size:32rpx;
   margin:0 30rpx 40rpx;
+}
+
+.body-business-area{
+  background-color: white;
+  padding-top:20px;
+}
+.body-business-area .title{
+  margin-bottom: 3px;
+  padding-bottom: 2px;
+}
+
+.body-business-area .sub-title{
+    font-size:24rpx;
+    color:#FAFAFA;
+}
+.body-business-area>text{
+  display: block;
 }
