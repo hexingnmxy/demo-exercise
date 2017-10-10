@@ -1,0 +1,13 @@
+<!--pages/us/us.wxml-->
+<view class='container'>
+<map id="map" scale="14" markers="{{markers}}" latitude="{{latitude}}" longitude="{{longitude}}" style="width: 100%; height: 500rpx;"></map>
+<text class='part-one'>一家小而专的互联网技术公司,提供互联网相关技术咨询、产品设计和开发等服务，产品形态包括H5、微信、App、web系统等。团队来自华为、腾讯、平安等公司,通过我们专业的技术积累、标准化的流程和高质量的人才建立专业、靠谱、有品质、不一样的服务。</text>
+<text>致力于打磨从0-1的产品，致力于改善我们的服务，享受产品和服务在打磨中升华的过程。对流程有着勤奋严谨的思考，产品代码有着死磕的精神，细节有着极致的追求。只求忠于内心。</text>
+<text>基于产品及项目目标，同时充分考虑企业未来发展，为每个项目提供切合实际的需求实现、技术造型、部署运营、技术团队搭建等建议。</text>
+<text>总结了大量的互联网产品数据运营案例，在考虑产品技术实现的同时，也会沉淀产品运营的数据基础，以数据驱动产品设计，以保证产品从第一个迭代版本开始，就能够积累宝贵的用户数据。</text>
+<view class='link-wrapper'>
+  <text class='title'>联系我们</text>
+  <view class='sub-title'>微信\t:　hexing19891111</view>
+  <view class='email-link'>邮箱\t:　nmxyhexing@163.com</view>
+</view>
+</view>

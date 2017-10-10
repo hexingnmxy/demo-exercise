@@ -13,10 +13,72 @@
   <view class='body-intro'>
         <text class='title'>我们是谁</text>
         <text class='content'>一家小而专的互联网技术公司,提供互联网相关技术咨询、产品设计和开发等服务，产品形态包括H5、微信、App、web系统等。</text>
-        <text class='content'>团队来自华为、腾讯、平安等公司,通过我们专业的技术积累、标准化的流程和高质量的人才建立专业、靠谱、有品质、不一样的的服务。</text>
+        <text class='content'>团队来自华为、腾讯、平安等公司,通过我们专业的技术积累、标准化的流程和高质量的人才建立专业、靠谱、有品质、不一样的服务。</text>
   </view>
   <view class='body-business-area'>
           <text class='title'>业务范围</text>
           <text class='sub-title'>打造精品软件和服务</text>
+          <view class='business-item'>
+            <i class="fa fa-wechat fa-lg"></i>
+            <view class='business-intr'>
+              <text class='item-title'>微信开发</text>
+              <text class='item-sub-title'>微信小程序、公众号定制开发</text>
+            </view> 
+          </view>
+          <view class='business-item'>
+            <i class="fa fa-desktop fa-lg"></i>
+            <view class='business-intr'>
+              <text class='item-title'>web系统开发</text>
+              <text class='item-sub-title'>电商系统、ERP系统、桌面软件</text>
+            </view> 
+          </view>
+          <view class='business-item'>
+            <i class="fa fa-mobile fa-4x" style='font-size:80rpx'></i>
+            <view class='business-intr'>
+              <text class='item-title'>APP开发</text>
+              <text class='item-sub-title'>Hybird/Native APP开发</text>
+            </view> 
+          </view>
+          
+  </view>
+  <view class='body-business-area two'>
+          <text class='title'>项目运作流程</text>
+          <text class='sub-title'>产品开发流程</text>
+          <view class='business-item'>
+            <i class="fa fa-file-text fa-lg"></i>
+            <view class='business-intr'>
+              <text class='item-title'>1 需求分析</text>
+              <text class='item-sub-title'>拟定产品形态，划定大致的需求范围，并评估产品的初步研发费用以及周期。</text>
+            </view> 
+          </view>
+          <view class='business-item'>
+            <i class="fa fa-paint-brush fa-lg"></i>
+            <view class='business-intr'>
+              <text class='item-title'>2 原型/UI设计</text>
+              <text class='item-sub-title'>产品经理跟进项目，进行详细需求分析以及产品原型设计。</text>
+            </view> 
+          </view>
+          <view class='business-item'>
+            <i class="fa fa-cubes fa-4x"></i>
+            <view class='business-intr'>
+              <text class='item-title'>3 项目管理</text>
+              <text class='item-sub-title'>项目经理管理项目进度，组织技术人员完成产品研发。</text>
+            </view> 
+          </view>
+          <view class='business-item'>
+            <i class="fa fa-calendar-check-o fa-4x"></i>
+            <view class='business-intr'>
+              <text class='item-title'>4 测试验收</text>
+              <text class='item-sub-title'>产品开发完成后，严格按照需求和代码质量标准进行测试，并双方协同验收。</text>
+            </view> 
+          </view>
+          <view class='business-item'>
+            <i class="fa fa-medkit fa-4x"></i>
+            <view class='business-intr'>
+              <text class='item-title'>5 交付维护</text>
+              <text class='item-sub-title'>按照合同约定完成交付培训以及bug修复维护。</text>
+            </view> 
+          </view>
+          
   </view>
 </view>

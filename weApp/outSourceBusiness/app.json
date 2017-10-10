@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/us/us",
+    "pages/case/case"
   ],
   "tabBar": {
     "color": "#757575",
@@ -16,13 +17,13 @@
         "selectedIconPath":"./img/home-selected.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/case/case",
         "text": "案例",
         "iconPath": "./img/case.png",
         "selectedIconPath": "./img/case-selected.png"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/us/us",
         "text": "我们",
         "iconPath": "./img/people.png",
         "selectedIconPath": "./img/people-selected.png"

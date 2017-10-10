@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+   <text class='title'>我们的案例</text> 
+   <view class='item-wrapper'>
+   <scroll-view class='scroll-view' scroll-x='1'>
+   <image mode='aspectFit' wx:for="{{imgalist}}" src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+  </scroll-view>
+      <view class='item-title-wrapper'>
+        <text class='item-title'>在线音乐播放器</text> 
+        <text class='item-sub-title'>H5方案多端音乐App</text> 
+      </view>
+    </view>
+     <view class='item-wrapper'>
+   <scroll-view class='scroll-view' scroll-x='1'>
+   <image mode='aspectFit' wx:for="{{weApp}}" src="{{item}}" data-src="{{item}}" bindtap="weApp"></image>
+  </scroll-view>
+      <view class='item-title-wrapper'>
+        <text class='item-title'>微信电商购物平台</text> 
+        <text class='item-sub-title'>微信小程序与微信网页版</text> 
+      </view>
+    </view>
+</view>
