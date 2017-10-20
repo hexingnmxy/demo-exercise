@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="format-detection" content="telphone=no, email=no"/>
+	<meta name="renderer" content="webkit">
+	<meta name="full-screen" content="yes">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<link rel="stylesheet" type="text/css" href="E:\github\demo-exercise\publicfile\reset.css">
+</head>
+<body>
+	<div id='xx' onclick="fillter(this)">xxxxx</div>
+	<script type="text/javascript" src='E:\github\demo-exercise\publicfile\jquery.js'></script>
+	<script>
+
+		$('#xx').on('click',function(){
+
+			console.log(111);
+		})
+
+		function fillter(that){
+			debugger
+			event.stopImmediatePropagation;	
+		}
+
+
+	</script>
+</body>
+</html>

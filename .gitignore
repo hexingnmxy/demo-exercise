@@ -3,6 +3,9 @@ imooc-happymall/node_modules/
 imooc-happymall/dist/
 .idea/
 vue-cli-MPA/MPA-demo/node_modules/
+vue-cli-MPA/vueCliDemo/node_modules/
+vue-cli-MPA/vueCliDemo/dist/
+vue-cli-MPA/vue-multi-page-master/node_modules/
 koa2-server/node_modules/
 koa2-nuxt/node_modules/
 koa2-nuxt/build/
@@ -17,3 +20,4 @@ ele-imooc/node_modules/
 vue-plugin-demo/vue-scroller/node_modules/
 vue-plugin-demo/vue-wxChat-master/node_modules/
 vue-plugin-demo/vue-scroller-master/node_modules/
+pingAnFaceBank_1.5.5/node_modules/

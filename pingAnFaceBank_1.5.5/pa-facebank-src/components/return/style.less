@@ -1,0 +1,54 @@
+@import '../../styles/config/_config';
+
+@returnWrapperHeight: .64rem; //组件高度
+@returnPaddingTop: @sizeSixth;  //
+@returnPaddingLeft: @sizeEleventh;  //
+@returnIconColor: @colorTenth;  //
+@returnTextFontSize: @sizeTwelfth;  //
+
+
+.return-wrapper{
+  height: 0.58rem;
+  background: @colorThird;
+  padding: 0 .2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.return-link{
+  height: 100%;
+  display: inline-block;
+  line-height: .58rem;
+  font-size: .26rem;
+}
+.return-icon{
+  float: left;
+  padding-right: .1rem;
+}
+.return-icon:after{
+  font-size: @returnTextFontSize;
+  color: @returnIconColor;
+}
+.return-text{
+  display: inline-block;
+  line-height: @returnTextFontSize;
+  font-size: .22rem;
+}
+.return-navigation-title{
+ line-height: .58rem;
+  font-size: .26rem;
+  font-weight: bold;
+  color: #666666;
+}
+.return-navigation-icon{
+  height: 100%;
+  display: inline-block;
+  float: right;
+  line-height: @returnWrapperHeight;
+  font-size: @returnTextFontSize;
+  padding: 0 .1rem;
+}
+
+.right-menu{
+  font-size: .26rem;
+}

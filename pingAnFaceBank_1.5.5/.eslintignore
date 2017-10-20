@@ -1,0 +1,7 @@
+pa-facebank/
+pa-ui/
+
+pa-facebank-src/common/modules/console.js
+pa-facebank-src/common/modules/core.js
+pa-facebank-src/common/modules/device.js
+pa-facebank-src/common/modules/ui.js

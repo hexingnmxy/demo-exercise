@@ -1,0 +1,121 @@
+@import "../../styles/config/_config";
+
+@navigatorBackgroundColor: @colorThird;
+@navigatorReturnIconFontSize: @sizeTwelfth;
+@navigatorUserIconFontSize: @sizeEighth;
+@navigatorIconDefaultColor: @colorTenth;
+@navigatorTitleFontSize: @sizeTwelfth;
+
+.component-slider-toggle{
+  width: 4.96rem;
+  height: 100%;
+  z-index: 60;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.navigator-wrapper{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.navigator-title{
+  height: 2rem;
+  background: url(./titleBackground.png) no-repeat;
+  position: relative;
+  .title-text{
+    color: #fefefe;
+    font-size: .3rem;
+    position: absolute;
+    left: .98rem;
+    bottom: .56rem;
+  }
+  .user-info{
+    position: absolute;
+    right: .25rem;
+    top: .26rem;
+    height: .44rem;
+    display: flex;
+    align-items: center;
+    .user-portrait{
+      height: .44rem;
+      width: .44rem;
+      margin-right: .28rem;
+      background: url(./userPortrait.png) no-repeat;
+    }
+    .user-name{
+      color: #efffff;
+      font-size: .22rem;
+    }
+  }
+  .triangle{
+    position: absolute;
+    left:.98rem;
+    bottom: 0;
+    border-left: .17rem solid transparent;
+    border-right: .17rem solid transparent;
+    border-bottom: .16rem solid #ffffff;
+  }
+}
+
+.navigator-content{
+  flex: 1;
+  position: relative;
+  .close-btn{
+    color: #cacaca;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -.01rem;
+    top: 46%;
+    height: .48rem;
+    width: .25rem;
+    background: #fafafa;
+    font-size: .18rem;
+    border-bottom-right-radius: .1rem;
+    border-top-right-radius: .1rem;
+    box-shadow: 0 .01rem .02rem .01rem #f8f8f8;
+    border: 1px solid #f0f0f0;
+  }
+  .step-line{
+    height: 100%;
+    margin-left: 1.04rem;
+    margin-top: .24rem;
+  }
+}
+
+.navigator-footer{
+  display: flex;
+  height: .82rem;
+  border-top: .01rem solid #c8c8c8;
+  font-size: .24rem;
+  color: #333333;
+  .left{
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    display: flex;
+    .iconClass{
+      margin-right: .1rem;
+      font-size: .34rem;
+    }
+  }
+  .line{
+    border: .01rem solid #c8c8c8;
+  }
+  .right{
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    display: flex;
+    .iconClass{
+      margin-right: .1rem;
+      font-size: .34rem;
+    }
+  }
+}

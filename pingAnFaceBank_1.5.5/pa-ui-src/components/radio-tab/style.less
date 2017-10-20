@@ -1,0 +1,81 @@
+@import '../../styles/_config.less';
+
+@radioTabThemeColor : @colorFirst; // 主题颜色 radio-Tab主题色
+@radioTabWhiteColor : @colorThird; // #ffffff radio-Tab白色
+@radioTabBorderColor:@colorEighth; // #cccccc 80%灰色 radio-Tab边框颜色
+@radioTabDisabledCheckedColor: @colorSixth; // #ebebeb 92%灰色 radio-Tab禁用选中颜色
+@radioTabGreenColor: @colorThirteenth; // 绿色按钮
+
+.radio-tab-wrapper{
+  border: 1px solid @radioTabBorderColor;
+  height: .4rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  width: 1.52rem;
+}
+
+.radio-item:first-child{
+  border: none;
+}
+
+.radio-item{
+  width: 100%;
+  line-height: .4rem;
+  border-left: 1px solid @radioTabBorderColor;
+  text-align: center;
+  font-size: .2rem;
+  &.checked{
+    color: @radioTabWhiteColor;
+    background: @radioTabGreenColor;
+  }
+}
+
+//.radio-item.first{
+//  border: none;
+//}
+
+//.radio-button-wrapper{
+//  width: 1rem;
+//  display: inline-block;
+//  height: 0.3rem;
+//  line-height: 0.3rem;
+//  position: relative;
+//  text-align: center;
+//}
+//
+//.radio-button-base{
+//  -webkit-appearance: none;
+//  border: 1px solid @radioButtonBorderColor;
+//  height: 100%;
+//  width: 100%;
+//  border-radius: 4px;
+//  cursor: pointer;
+//}
+//
+//.radio-button-text{
+//  position: absolute;
+//  top:0;
+//  left:0;
+//  width: 100%;
+//  height: .3rem;
+//  line-height: .3rem;
+//  cursor: pointer;
+//}
+//
+//.radio-button-base:checked{
+//  border-color: @radioButtonGreenColor
+//}
+//.radio-button-base:checked + span{
+//  color: @radioButtonGreenColor;
+//}
+//.radio-button-base:disabled{
+//  border: 1px solid @radioButtonDisabledCheckedColor;
+//}
+//
+//.radio-button-base:disabled + span{
+//  color: @radioButtonBorderColor;
+//  cursor: not-allowed;
+//}

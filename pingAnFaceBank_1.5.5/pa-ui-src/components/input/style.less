@@ -1,0 +1,66 @@
+@import '../../styles/_config.less';
+
+@inputThemeColor: @colorFirst; // 主题颜色 input主题色
+@inputWhiteColor: @colorThird; // #ffffff input背景颜色
+@inputFontColor: @colorTwelfth; // #333333 20%灰色 input字体颜色
+@inputBorderColor: @colorEighth; // #999999 60%灰色 input边框默认颜色
+@inputErrorColor : @colorFourteenth; // 红色 input边框错误颜色
+@inputSuccessColor: @colorThirteenth; // 绿色 input边框成功颜色
+
+@inputDisabledColor:@colorEighth; // #cccccc 80%灰色 input禁用颜色
+
+.input-wrap-verify{
+  position: relative;
+}
+
+.input-default{
+  color: @inputFontColor;
+  padding-left:.1rem;
+  padding-right:.36rem;
+  width: 100%;
+  height: .4rem;
+  font-size: .2rem;
+  border: 0.01rem solid @inputBorderColor;
+  border-radius: 5px;
+  background-color: initial;
+}
+
+.input-default:disabled{
+  border: 0.01rem solid @inputDisabledColor;
+  background: @colorEighth;
+}
+
+.input-default.no-clear{
+  padding-right:.1rem;
+}
+
+.input-default:focus{
+  border-color: @inputThemeColor;
+}
+
+.input-clear{
+  position: absolute;
+  top: .12rem;
+  right: 0;
+  width: .3rem;
+}
+
+.input-clear:after{
+  position: absolute;
+  font-family: @defaultIconName;
+  content: '\F21F';
+  font-size: .12rem;
+  color: @inputThemeColor;
+  font-style: normal;
+}
+
+.input-error-tip{
+  font-size: .14rem;
+  padding-left: .1rem;
+  padding-top: .05rem;
+  color:@inputThemeColor
+}
+
+.input-error-icon{
+  padding-right: .05rem;
+}

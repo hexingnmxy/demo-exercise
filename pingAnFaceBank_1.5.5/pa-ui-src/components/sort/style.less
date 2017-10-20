@@ -1,0 +1,74 @@
+@import '../../styles/_config.less';
+
+@sortThemeColor: @colorFirst; // 主题颜色 按钮排序--主题色
+@sortWhiteColor: @colorThird; // #ffffff 按钮排序--背景颜色
+@sortBorderColor:@colorEighth; // #cccccc 80%灰色 按钮排序--边框颜色
+@sortDisabledColor:@colorEighth; // #cccccc 80%灰色 按钮排序--禁用颜色
+@sortFontColor: @colorTwelfth; // #333333 20%灰色
+
+.sort-btn{
+  min-width: 1.25rem;
+  height: .36rem;
+  line-height: .36rem;
+  font-size: 0.16rem;
+  background-color: @sortWhiteColor;
+  color: @sortFontColor;
+  border-radius: .05rem;
+  border: none;
+  position: relative;
+  padding: 0 .45rem 0 .2rem;
+}
+
+.sort-status-up{
+  color: @sortThemeColor;
+}
+
+.sort-status-down{
+  color: @sortThemeColor;
+}
+
+.sort-text-span{
+  display: inline-block;
+  width: 100%;
+}
+
+.sort-icon-btn{
+  width: 20px;
+}
+
+.sort-icon-btn:after{
+  font-family: @defaultIconName;
+  content: '\F226';
+  font-style: normal;
+  font-size: .15rem;
+  color: @sortFontColor;
+  position: absolute;
+  bottom: -.06rem;
+  right: .1rem;
+}
+.sort-icon-btn:before{
+  position: absolute;
+  font-family: @defaultIconName;
+  content: '\F225';
+  font-style: normal;
+  font-size: .15rem;
+  color: @sortFontColor;
+  top: -.06rem;
+  right: .1rem;
+}
+.sort-status-up .sort-icon-btn:before{
+  color: @sortThemeColor;
+}
+
+.sort-status-down .sort-icon-btn:after{
+  color: @sortThemeColor;
+}
+
+.sort-status-none{
+  padding: 0;
+}
+
+.sort-status-none .sort-icon-btn{
+  display: none;
+}
+

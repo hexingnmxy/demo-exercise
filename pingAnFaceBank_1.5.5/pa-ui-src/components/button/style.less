@@ -1,0 +1,178 @@
+@import '../../styles/_config.less';
+
+@btnThemeColor: @colorFirst; // 主题颜色 按钮主题色
+@btnWhiteColor: @colorThird; // #ffffff 按钮背景颜色
+@btnBorderColor: @colorTenth; // #999999 60%灰色 默认按钮边框颜色
+@btnDisabledColor:@colorEighth; // #cccccc 80%灰色 禁用颜色
+@btnGreenColor: @colorThirteenth; // 绿色按钮
+@btnGreenIconTextColor: @colorEleventh; // #666666 默认文字颜色
+@btnSpaceWidth: @sizeSixteenth; // button-padding .40rem
+
+button{
+  border: 1px solid @btnBorderColor;
+  background-color: @btnWhiteColor;
+  color: @btnGreenIconTextColor;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: .06rem;
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 2px;
+}
+button:active{
+  transition: .5s background-color;
+}
+
+.btn-main{
+  border: 1px solid @btnThemeColor;
+  color: @btnWhiteColor;
+  background: @btnThemeColor;
+}
+
+// 倒计时按钮
+.button-size-x-min{
+  line-height: .35rem;
+  font-size: .18rem;
+  padding: 0 .2rem;
+}
+
+// checkbox-button、radio-button 按钮
+.button-size-min{
+  line-height: .4rem;
+  font-size: .18rem;
+  padding: 0 .2rem;
+}
+
+// 弹窗按钮
+.button-size-mid{
+  line-height: .45rem;
+  font-size: .2rem;
+  padding: 0 .26rem;
+}
+
+// 页面中常见按钮
+.button-size-max{
+  line-height: .5rem;
+  font-size: .24rem;
+  padding: 0 .3rem;
+}
+
+.button-type-full{
+  color: @btnWhiteColor;
+  background: @btnThemeColor;
+}
+
+.button-type-rectangle-full{
+  border: 1px solid @btnThemeColor;
+  color: @btnWhiteColor;
+  background: @btnThemeColor;
+  border-radius: 5px;
+}
+
+//.button-type-empty{
+//  color: @btnThemeColor;
+//  background: @btnWhiteColor;
+//  border: 1px solid @btnThemeColor;
+//}
+
+// 默认
+.button-type-rectangle-empty{
+  border-radius: 5px;
+}
+
+// 主题
+.button-type-rectangle-empty-theme{
+  color: @btnThemeColor;
+  border: 1px solid @btnThemeColor;
+  border-radius: 5px;
+}
+
+.button-type-rectangle-empty-green{
+  border-radius: 5px;
+  color: @btnGreenColor;
+  border-color: @btnGreenColor;
+}
+
+.button-type-rectangle-empty-green-icon{
+  border-radius: 5px;
+  color: @btnGreenIconTextColor;
+  border-color: @btnGreenColor;
+  position: relative;
+}
+
+.button-size-min.button-type-rectangle-empty-green-icon .icon:after{
+  color: @btnGreenColor;
+  font-size: .22rem;
+}
+
+//.button-size-mid.button-type-rectangle-empty-green-icon .icon:after{
+//  color: @btnGreenColor;
+//  font-size: .27rem;
+//}
+//
+//.button-size-max.button-type-rectangle-empty-green-icon .icon:after{
+//  color: @btnGreenColor;
+//  font-size: .31rem;
+//}
+
+.button-size-min .icon{
+  position: relative;
+  left: -7px;
+}
+
+.button-size-mid .icon{
+  position: relative;
+  left: -13px;
+}
+
+.button-size-max .icon{
+  position: relative;
+  left: -19px;
+}
+
+.button-type-full:disabled{
+    border: 2px solid @btnBorderColor;
+    color: @btnWhiteColor;
+    background: @btnDisabledColor;
+    box-shadow: none;
+}
+
+.button-type-rectangle-full:disabled{
+  border: 1px solid @btnDisabledColor;
+  color: @btnWhiteColor;
+  background: @btnDisabledColor;
+  box-shadow: none;
+  border-radius: 5px;
+}
+
+.button-type-empty:disabled{
+    color: @btnBorderColor;
+    border: 1px solid @btnDisabledColor;
+    box-shadow: none;
+}
+
+.button-type-rectangle-empty:disabled{
+  color: @btnDisabledColor;
+  border: 1px solid @btnDisabledColor;
+  border-radius: 5px;
+}
+
+.button-type-rectangle-empty-theme:disabled{
+  color: @btnBorderColor;
+  border: 1px solid @btnDisabledColor;
+  border-radius: 5px;
+}
+
+.button-type-rectangle-empty-green:disabled{
+  color: @btnBorderColor;
+  border: 1px solid @btnDisabledColor;
+  border-radius: 5px;
+}
+
+.button-display-hide{
+    display: none;
+}
+
+.button-display-inline{
+    display: inline-block;
+}

@@ -1,0 +1,70 @@
+.swipe-card-item{
+  background: #ffffff;
+  height: 100%;
+}
+.swipe-card-wrapper{
+  padding: .32rem .64rem .32rem .64rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .title{
+    color: #666666;
+    font-size: .22rem;
+    .high-light{
+      color: #fa8919;
+    }
+  }
+  .swipe-bank-card-gif{
+    display: flex;
+    flex-grow: 1;
+    background: url(../../assets/gif/swipe-bank-card.gif) no-repeat;
+    background-size: 100% 100%;
+  }
+  .swipe-id-card-gif{
+    display: flex;
+    flex-grow: 1;
+    background: url(../../assets/gif/swipe-id-card.gif) no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.swipe-id-card-result{
+  background: #ffffff;
+  padding: 10% 16.5% 10% 16.5%;
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  .swipe-id-card-up{
+    display: flex;
+    justify-content: space-between;
+    .id-card-info{
+      .title{
+        font-size: .26rem;
+        color: #fa8919;
+        margin-bottom: .64rem;
+      }
+      .info{
+        font-size: .22rem;
+        color: #666666;
+        margin-bottom: .48rem;
+      }
+      .info-cardNo{
+        font-size: .22rem;
+        color: #666666;
+      }
+    }
+    .id-card-portrait{
+      height: 2.2rem;
+      width: 1.84rem;
+      margin-top: .26rem;
+    }
+  }
+  .swipe-id-card-down{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    color: #fa8d22;
+    font-size: .22rem;
+  }
+}

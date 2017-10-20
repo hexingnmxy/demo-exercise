@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="format-detection" content="telphone=no, email=no"/>
+	<meta name="renderer" content="webkit">
+	<meta name="full-screen" content="yes">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<link rel="stylesheet" type="text/css" href="E:\github\demo-exercise\publicfile\reset.css">
+</head>
+<body>
+	<div id='app'>
+		<div>{{datax}}</div>
+	</div>
+
+	<script src='../publicfile/vue2.4.2.js'></script>
+	<script>
+		var vm = new Vue({
+			  el: '#app',
+			  data: {
+			    name: 'Google',
+			    url: 'http://www.google.com',
+			    data1:10
+			  },
+			  mounted:function(){
+			  	console.log(this.datax)
+			  	this.datax = 2;
+			  	console.log(this.datax)
+			  	console.log(this.data1)
+			  },
+			  computed: {
+			  	datax:{
+			  		get:function(){
+			  			return this.data1;
+			  		},
+			  		set:function(newVal){
+			  			// return newVal;
+			  			this.data1 = newVal;
+			  		}
+			  	},
+			    site: {
+			      // getter
+			      get: function () {
+			        return this.name + ' ' + this.url
+			      },
+			      // setter
+			      set: function (newValue) {
+			        var names = newValue.split(' ')
+			        this.name = names[0]
+			        this.url = names[names.length - 1]
+			      }
+			    }
+			  }
+			})
+</script>
+</body>
+</html>

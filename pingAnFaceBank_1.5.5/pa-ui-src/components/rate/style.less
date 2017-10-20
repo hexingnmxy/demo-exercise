@@ -1,0 +1,52 @@
+@import '../../styles/_config.less';
+
+@rateThemeColor: @colorFirst; // 主题颜色 按钮主题色
+@rateDefaultColor:@colorEighth; // #cccccc 80%灰色 按钮边框颜色
+@rateDisabledColor:@colorSixth; // #cccccc 80%灰色 禁用颜色
+
+.rate-wrap{
+    text-align: left;
+    display: inline-block;
+    line-height: normal;
+}
+
+.rate-wrap a{
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    color: @rateDefaultColor;
+}
+
+.rate-wrap span.is-active{
+    color: @rateThemeColor;
+}
+
+.rate-wrap.disabled span.is-active{
+    color: #999999;
+}
+
+//.rate-wrap.disabled span.is-active{
+//    color: @rateDisabledColor;
+//}
+
+a.rate-size-min{
+    font-size: @sizeFourteenth;
+    height: @sizeFourteenth;
+    width: @sizeFourteenth;
+    line-height: @sizeFourteenth;
+}
+
+a.rate-size-mid{
+    font-size: @sizeFifteenth;
+    height: @sizeFifteenth;
+    width: @sizeFifteenth;
+    line-height: @sizeFifteenth;
+}
+
+a.rate-size-max{
+    font-size: @sizeSixteenth;
+    height: @sizeSixteenth;
+    width: @sizeSixteenth;
+    line-height: @sizeSixteenth;
+}
+

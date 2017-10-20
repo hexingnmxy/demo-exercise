@@ -1,0 +1,69 @@
+@import "../config/_config.less";
+@import "./mixin";
+
+.ui-page-box{
+  min-height: 100%;
+  padding: @sizeSixth;
+  //background: @colorFifth;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+}
+.ui-page-green:before{
+  content: '';
+  position: absolute;
+  left: .8rem;
+  top: 0;
+  display: inline-block;
+  width: .8rem;
+  height: .05rem;
+  background: @colorThirteenth;
+}
+
+.ui-page-box-horizontal{
+  min-height: 100%;
+  padding: @sizeSixth;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: row;
+}
+
+.ui-page {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: .5s all;
+}
+
+.ui-page-block{
+  position: relative;
+  padding: .3rem .8rem .4rem .8rem;
+  background-color: @colorThird;
+  .shadow();
+}
+
+.margin-top20{
+  margin-top: .2rem;
+}
+
+.ui-page-next-enter-active, .ui-page-next-leave {
+  transform: translate3d(0, 0, 0);
+}
+.ui-page-next-enter {
+  transform: translate3d(100%, 0, 0);
+}
+.ui-page-next-leave-active {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.ui-page-previous-active, .ui-page-previous-leave {
+  transform: translate3d(-0%, 0, 0);
+}
+.ui-page-previous-enter {
+  transform: translate3d(-100%, 0, 0);
+}
+.ui-page-previous-leave-active {
+  transform: translate3d(100%, 0, 0);
+}

@@ -1,0 +1,64 @@
+@import "../_config";
+@import "../mixin";
+
+@popBoxBg       : @colorThird;
+@popBoxShadow   : @colorTwelfth;
+.ui-pop-base{
+  padding-bottom: .2rem;
+  z-index: 80;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%,0);
+  border-radius: 5px;
+  .shadow();
+  background-color: @popBoxBg;
+  overflow: hidden;
+  max-width: 80%;
+  max-height: 80%;
+  // transition: .3s all ease-in-out;
+}
+@keyframes pop-show {
+  0%{
+    transform: translate3d(-50%, -50%,0)  scale3d(0.3,0.3,1);
+    opacity: .3;
+  }
+  60%{
+    transform: translate3d(-50%, -50%,0) scale3d(1.1,1.1,1);
+    opacity: .8;
+  }
+  100%{
+    transform: translate3d(-50%, -50%,0) scale3d(1,1,1);
+    opacity: 1;
+  }
+}
+@keyframes pop-hide {
+  0%{
+    transform: translate3d(-50%, -50%,0) scale3d(1,1,1);
+    opacity: 1;
+  }
+  40%{
+    transform: translate3d(-50%, -50%,0) scale3d(1.1,1.1,1);
+    opacity: 1;
+  }
+  100%{
+    transform: translate3d(-50%, -50%,0) scale3d(0.3,0.3,1);
+    opacity: .3;
+  }
+}
+.ui-pop-transition-enter-active {
+  animation: pop-show .3s ease-out;
+}
+.ui-pop-transition-leave-active {
+  animation: pop-hide .3s ease-in;
+}
+//.ui-pop-transition-leave {
+//  transform: translateY(-50%) translateX(-50%) scale(1);
+//  opacity: 1;
+//}
+//.ui-pop-transition-leave-active,
+//.ui-pop-transition-enter{
+//  transform: translateY(-50%) translateX(-50%) scale(.05);
+//  opacity: .3;
+//
+//}

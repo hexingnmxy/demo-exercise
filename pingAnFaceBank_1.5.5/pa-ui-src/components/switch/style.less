@@ -1,0 +1,105 @@
+@import '../../styles/_config.less';
+
+//@switchBtnWidth             : @sizeTwentyFirst;
+//@switchBtnHeight            : @sizeEighth;
+//@switchBtnDotWidth          : @sizeSixth;
+//@switchBtnDotHeight         : @sizeSixth;
+
+@switchBtnBorderColor       : @colorSeventh;
+@switchBtnDotColor          : @colorThird;
+@switchBtnUnCheckedBgColor  : @colorTenth; // #999999
+@switchBtnCheckedBgColor    : @colorThirteenth; // 绿色
+@switchBtnDisBgColor        : @colorSixth;
+@switchBtnDisDotColor       : @colorThird;
+@switchBtnDisCheckedBgColor : @colorSixth;
+.switch-btn-base{
+  -webkit-appearance: none;
+  width: .62rem;
+  height: .29rem;
+  border-radius: .2rem;
+  background-color: @switchBtnUnCheckedBgColor;
+  border: 1px solid @switchBtnBorderColor;
+  position: relative;
+  &:checked{
+    background-color: @switchBtnCheckedBgColor;
+  }
+}
+.switch-btn-base:checked:before{
+  left: 100%;
+  transform: translateX(-100%);
+}
+.switch-btn-base:before{
+  transform: translateX(0);
+  left: 0;
+}
+.switch-btn-base:checked:before,.switch-btn-base:before{
+  font-family: @defaultIconName;
+  width: .24rem;
+  height: .24rem;
+  border-radius: 50%;
+  display: inline-block;
+  content: '';
+  background: @switchBtnDotColor;
+  border: 1px solid @switchBtnBorderColor;
+  position: absolute;
+}
+.switch-btn-base:disabled:before{
+  background: @switchBtnDisDotColor;
+}
+.switch-btn-base:disabled{
+  background: @switchBtnDisBgColor;
+}
+.switch-btn-base:disabled:checked{
+  background: @switchBtnDisCheckedBgColor;
+}
+.switch-btn{
+  animation: switch-colorRtL .5s;
+}
+.switch-btn:checked{
+  background-color: @switchBtnCheckedBgColor;
+  border: 1px solid @switchBtnBorderColor;
+  animation: switch-colorLtR .5s;
+}
+.switch-btn:before{
+  animation: switch-slideRtL .5s;
+  background: @switchBtnDotColor;
+}
+.switch-btn:checked:before{
+  background: @switchBtnDotColor;
+  animation: switch-slideLtR .5s;
+}
+@keyframes switch-slideRtL {
+    0%{
+        left: 100%;
+        transform: translateX(-100%);
+    }
+    100%{
+      transform: translateX(0);
+      left: 0;
+    }
+}
+@keyframes switch-slideLtR {
+    0%{
+        transform: translateX(0);
+        left: 0;
+    }
+    100%{
+        left: 100%;
+    }
+}
+@keyframes switch-colorLtR {
+    0%{
+        background-color: @switchBtnUnCheckedBgColor;
+    }
+    100%{
+        background-color: @switchBtnCheckedBgColor;
+    }
+}
+@keyframes switch-colorRtL {
+    0%{
+        background-color: @switchBtnCheckedBgColor;
+    }
+    100%{
+        background-color: @switchBtnUnCheckedBgColor;
+    }
+}

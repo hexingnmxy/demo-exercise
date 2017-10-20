@@ -1,0 +1,30 @@
+@import "../../styles/_config";
+
+@firstLevelFontSize: @sizeSeventh;
+@secondLevelFontSize: @sizeSixth;
+@secondLevelPaddingLeft: @sizeSixteenth;
+@secondLevelTitleActiveColor: @colorFirst;
+@secondLevelTitleMarginTop: @sizeSixteenth;
+
+
+.first-level-title{
+  width: 100%;
+  line-height: @firstLevelFontSize;
+  font-size: @firstLevelFontSize;
+  font-weight: bold;
+}
+.second-level-wrapper{
+  padding: 0 0 .5rem 0;
+}
+.second-level-title{
+  color: #666666;
+  width: 100%;
+  margin-top: @secondLevelTitleMarginTop;
+  line-height: @secondLevelFontSize;
+  font-size: @secondLevelFontSize;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.title-active{
+  color: @secondLevelTitleActiveColor;
+}

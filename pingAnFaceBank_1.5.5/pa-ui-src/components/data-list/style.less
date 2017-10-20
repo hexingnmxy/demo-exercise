@@ -1,0 +1,73 @@
+@import "../../styles/_config";
+
+.data-list-content{
+  width: 100%;
+  overflow: auto;
+  flex: 1;
+}
+.table {
+  display: table;
+  border-collapse: collapse;
+  margin: .1rem 0 .2rem 0;
+  min-width: 6rem;
+  min-height: .8rem;
+  overflow: auto;
+  table-layout: auto;
+  width: 100%;
+}
+
+.table-column-group {
+  display: table-column-group;
+}
+
+.table-column {
+  display: table-column;
+}
+
+.table-row-group {
+  display: table-row-group;
+}
+
+.table-row {
+  //display: table-row;
+  display: flex;
+  align-items: center;
+}
+
+.table-row-group .table-row:hover, .table-footer-group .table-row:hover {
+  background: #f6f6f6;
+}
+
+.table-cell {
+  display: table-cell;
+  padding-right: .18rem;
+  word-break: normal;
+  min-width: 1rem;
+  line-height: 0.4rem;
+  white-space: nowrap;
+}
+.pop-content > div{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.table-cell:first-child {
+  min-width: .18rem;
+  text-align: right;
+  padding-left: 0.2rem;
+}
+.pop-header-contener{
+  flex: none;
+}
+.pop-btn-list {
+  flex: none;
+}
+.ui-pop-base {
+  max-height: 80%;
+}
+
+.table-row .table-cell:nth-child(4){
+  width: 3.5rem;
+}

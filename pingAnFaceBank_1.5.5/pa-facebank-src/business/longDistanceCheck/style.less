@@ -1,0 +1,147 @@
+@import "../../styles/config/_config";
+
+//基本样式
+@defaultBgColor     : @colorFourth;
+@defaultFontColor   : @colorTwelfth;
+@inputTextColor: @colorTenth; // #999999 60%灰色
+@themeColor: @colorFirst; // 主题颜色 按钮主题色
+
+#page-auth.page-container{
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+
+.auth-panel{
+  min-height: 100%;
+  background: #fff;
+  position: relative;
+  padding-bottom: .4rem;
+}
+
+.auth-person{
+  display: flex;
+  padding: .9rem 0;
+  justify-content: center;
+}
+
+.input-item{
+  display: flex;
+  align-items: center;
+  height: .36rem;
+  justify-content: center;
+}
+
+.input-item-text{
+  margin-right: .2rem;
+  font-size: .2rem;
+  color: @inputTextColor;
+}
+
+.input-item .input-wrap-verify{
+  width: 2.8rem;
+}
+
+.icon-light:after, .icon-invisibility:after{
+  color: @themeColor;
+}
+
+.icon-customer{
+  color: #52b786;
+  font-size: 1.3rem;
+}
+
+.icon-server{
+  color: #f0461C;
+  font-size: 1.3rem;
+}
+
+.icon-network-unusual{
+  color: @themeColor;
+}
+
+.icon-network-unusual:after{
+  font-size: 0.4rem;
+}
+
+.auth-tip{
+  display: flex;
+  justify-content: center;
+  margin-top: .55rem;
+  margin-bottom: 1.2rem;
+}
+
+.auth-panel-bottom{
+  display: flex;
+  align-items: center;
+  //height: .09rem;
+  width: 100%;
+  justify-content: center;
+  //position: absolute;
+  //bottom: 0;
+}
+
+.auth-person-left,.auth-person-right{
+  width: 1.36rem;
+  height: 1.2rem;
+}
+
+.auth-person-center{
+  width: 5.36rem;
+  height: 1.2rem;
+  padding:.5rem .25rem 0 .25rem;
+}
+
+.auth-person-center .line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-person-center .text{
+  margin-top: .2rem;
+  text-align: center;
+  font-size: .18rem;
+  color: #333333;
+  letter-spacing: 1px;
+}
+
+.auth-line {
+  height: .02rem;
+  width: 2rem;
+  margin-top: -.14rem;
+  background: linear-gradient(to right,#fff 0,#ccc 15%,#ccc 85%,#fff 100%);
+}
+
+.line-wait {
+  height: .5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.auth-line-wait {
+  height: .02rem;
+  width: 100%;
+  background: linear-gradient(to right,#fff 0,#ccc 15%,#ccc 85%,#fff 100%);
+  position: absolute;
+  top: 38%;
+  left: 0;
+}
+
+.auth-line-loading {
+  width: 1.53rem;
+  height: .29rem;
+  background: url(../../assets/png/auth-loading.png) no-repeat;
+  position: absolute;
+  top: 13%;
+  left: -.64rem;
+  animation: authLineLoading 2.5s infinite;
+  animation-timing-function: linear;
+}
+
+
+@keyframes authLineLoading {
+  from{ left: -.64rem}
+  to{ left: 3.4rem}
+}

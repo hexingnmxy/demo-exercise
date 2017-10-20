@@ -1,0 +1,117 @@
+@import "./config/_config";
+@import "./ui/_ui";
+@import "./ui/mixin";
+
+@contentSamplePageTableTdBgColor  : @colorThird;    // #ffffff 白色
+@contentSampleTableTitleColor     : @colorEleventh; // #666666 40%灰色
+@contentSampleTableTipsColor      : @colorTenth;    // #999999 60%灰色
+
+.content-sample-table-wrapper{
+  margin-left: .1rem;
+}
+
+.content-sample-table-title{
+  margin: .4rem 0 .15rem;
+  color: @contentSampleTableTitleColor;
+  font-weight: bold;
+  font-size: .16rem;
+}
+
+.content-sample-table-tips{
+  margin-left: .1rem;
+  font-size: .14rem;
+  color: @contentSampleTableTipsColor;
+}
+
+.content-sample-top{
+  padding: 0 .25rem;
+  border: 1px solid #dbe6ec;
+  border-bottom: none;
+  margin-top: .2rem;
+  line-height: .4rem;
+  background: @contentSampleTableTipsColor;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  color: @contentSamplePageTableTdBgColor;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+}
+
+.content-sample-top-parameter{
+  width: 3.6rem;
+}
+
+.content-sample-top-explain{
+  width: 100%;
+}
+
+.content-sample-top-type{
+  width: 1.8rem;
+}
+
+.content-sample-top-alternative{
+  width: 2.2rem;
+}
+
+.content-sample-top-default{
+  width: 1.8rem;
+}
+
+.content-sample-table{
+  border: 1px solid #dbe6ec;
+  padding: 0 .15rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.content-sample-table-row{
+  border-bottom: 1px solid #dbe6ec;
+  padding: .15rem .1rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: @contentSampleTableTipsColor;
+}
+
+.content-sample-table-row-parameter{
+  text-align: center;
+  width: 3.6rem;
+}
+
+.content-sample-table-row-explain{
+  text-align: center;
+  width: 100%;
+}
+
+.content-sample-table-row-type{
+  text-align: center;
+  width: 1.8rem;
+}
+
+.content-sample-table-row-alternative{
+  word-break: break-all;
+  text-align: center;
+  width: 2.2rem;
+}
+
+.content-sample-table-row-default{
+  text-align: center;
+  width: 1.8rem;
+}
+
+.content-sample-table-row:last-of-type{
+  border-bottom: none;
+}
+
+.slide-fade-enter-active{
+  transition: all .3s ease;
+}
+
+//.slide-fade-leave-active{
+//  transition: all .3s ease;
+//}
+
+.slide-fade-enter{
+  transform: translateX(500px);
+}

@@ -1,0 +1,28 @@
+@import '../../styles/_config.less';
+
+@textareaThemeColor: @colorFirst; // 主题颜色 textarea主题色
+@textareaWhiteColor: @colorThird; // #ffffff textarea背景颜色
+@textareaBorderColor:@colorEighth; // #cccccc 80%灰色 按钮边框颜色
+
+.textarea-wrap{
+    border: 1px solid @textareaBorderColor;
+    background: @textareaWhiteColor;
+    padding: .1rem .15rem;
+}
+
+.textarea-wrap.textarea-focus{
+    border-color: @textareaThemeColor;
+}
+
+textarea{
+    border:0;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    font-size: .16rem;
+}
+
+.textarea-counter{
+    color: #B2B2B2;
+    text-align: right;
+}

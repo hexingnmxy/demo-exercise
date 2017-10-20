@@ -1,0 +1,65 @@
+@import "./config/_config.less";
+
+//基本样式
+@defaultBgColor     : @colorFourth;
+@defaultFontColor   : @colorTwelfth;
+
+.page-wrapper{
+  height: 100%;
+}
+
+.page{
+  height: 100%;
+  overflow: auto;
+  background: #f5f5f5;
+  box-shadow: 0 0 15px rgba(0,0,0,.1)inset;
+  padding-top: .58rem;
+}
+
+// 页面里面有几个模块 竖排
+.page-container-column{
+  padding: .2rem;
+  min-height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+// 简单页面(高度不会发生改变的页面)里面有几个模块 竖排 比如：刷卡页面
+.page-simple-container-column{
+  padding: .2rem;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+// 页面里面有几个模块 横排
+.page-container-row{
+  padding: .2rem;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+}
+
+.page-buttons{
+  position: fixed;
+  bottom: .5rem;
+  right: .6rem;
+  display: flex;
+  //background: #ffffff;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.page-buttons-left{
+  margin-right: .7rem;
+}
+
+.title-position{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}

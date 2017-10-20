@@ -1,0 +1,28 @@
+@import "../../styles/_config";
+
+@dotItemFontSize: @sizeFourth;
+@dotItemDotSize: .07rem;
+@dotItemDotColor: @colorFirst;
+@dotItemFontColor: @colorTenth;
+
+.dot-item{
+  font-size: @dotItemFontSize;
+  color: @dotItemFontColor;
+  line-height: .36rem;
+  padding-left: .2rem;
+  position: relative;
+}
+.dot-item:before{
+  content: '';
+  width: @dotItemDotSize;
+  height: @dotItemDotSize;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 .1rem 0 0;
+  display: inline-block;
+  background: @dotItemDotColor;
+}
+

@@ -1,0 +1,63 @@
+@import "./config/_config.less";
+
+//基本样式
+@defaultBgColor     : @colorFourth;
+@defaultFontColor   : @colorTwelfth;
+
+html{
+  font-size: 625%;
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: @defaultBgColor;
+  display: block;
+  letter-spacing: .02rem;
+}
+body{
+  font-size: .16rem;
+  color: @defaultFontColor;
+  overflow-x: hidden;
+}
+body>div{
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+button{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+button:active{
+  transition:.3s opacity;
+  opacity: .8;
+}
+*{
+  font-family: @defaultFont;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding:0;
+}
+
+@font-face{
+  font-family: pinganfont;
+  //src: url('../assets/font/iconfont0.ttf');
+  font-weight:normal;
+  font-style:normal;
+}
+
+.font-icon{
+  font-family: pinganfont;
+  font-weight:normal;
+  font-style:normal;
+  text-decoration:inherit;
+  -webkit-font-smoothing:antialiased;
+}
