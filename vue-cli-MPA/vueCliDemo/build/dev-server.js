@@ -22,3 +22,5 @@ require('webpack-dev-middleware-hard-disk')(compiler, {
   // serverSideRender: true
 })
 
+
+

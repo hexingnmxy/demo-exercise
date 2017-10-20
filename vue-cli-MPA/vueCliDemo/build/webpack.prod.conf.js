@@ -7,7 +7,6 @@ var baseWebpackConfig = require('./webpack.base.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-var glob = require('glob')
 
 var env = config.build.env
 
@@ -82,17 +81,10 @@ var webpackConfig = merge(baseWebpackConfig, {
   ]
 })
 
-function getEntry(globPath) {
- var entries = {},
-  basename;
- glob.sync(globPath).forEach(function (entry) {
-  basename = path.basename(entry, path.extname(entry));
-  entries[basename] = entry;
- });
- return entries;
-}
+
  
-var pages = getEntry('src/pages/**/*.html');
+var pages = utils.getEntries('src/pages/**/*.html');
+
 for (var pathname in pages) {
  var conf = {
   filename: pathname + '.html',

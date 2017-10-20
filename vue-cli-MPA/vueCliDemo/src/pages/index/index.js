@@ -1,4 +1,4 @@
-import c from '../../components/comm'
+import pageCommon from '../../components/comm'
 
 var home = {
 	data:{
@@ -12,5 +12,5 @@ var home = {
 	}
 };
 home.pageEntryLoad();
-console.log(c)
+
 

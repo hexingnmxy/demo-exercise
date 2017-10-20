@@ -5,9 +5,8 @@ var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
-var glob = require('glob')
 var path = require('path')
-
+var vConsolePlugin = require('vconsole-webpack-plugin'); 
 
 // add hot-reload related code to entry chunks
 // Object.keys(baseWebpackConfig.entry).forEach(function (name) {
@@ -21,6 +20,9 @@ module.exports = merge(baseWebpackConfig, {
   // cheap-module-eval-source-map is faster for development
   devtool: '#cheap-module-eval-source-map',
   plugins: [
+      new vConsolePlugin({
+            enable: true // 发布代码前记得改回 false
+        }),
     new webpack.DefinePlugin({
       'process.env': config.dev.env
     }),
@@ -33,22 +35,13 @@ module.exports = merge(baseWebpackConfig, {
     //   template: 'index.html',
     //   inject: true
     // }),
-    new FriendlyErrorsPlugin()
+    new FriendlyErrorsPlugin(),
   ]
 })
 
-function getEntry(globPath) {
-  
- var entries = {},basename;
+
  
- glob.sync(globPath).forEach(function (entry) {
-  basename = path.basename(entry, path.extname(entry));
-  entries[basename] = entry;
- });
- return entries;
-}
- 
-var pages = getEntry('src/pages/**/*.html');
+var pages = utils.getEntries('src/pages/**/*.html');
  
 for (var pathname in pages) {
  // 配置生成的html文件，定义路径等

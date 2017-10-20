@@ -3,22 +3,8 @@ var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
 var glob = require('glob')
-var entries = getEntry('./src/pages/**/*.js')
 
-
-//获取入口js文件
-function getEntry(globPath) {
- var entries = {},
-  basename, tmp, pathname;
- 
- glob.sync(globPath).forEach(function (entry) {
-  basename = path.basename(entry, path.extname(entry));
-  pathname = basename.split("_")[0]; //index_main.js得到index
-  entries[pathname] = entry;
- });
- return entries;
-}
-
+// console.log(process.env.NODE_ENV)
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -28,7 +14,7 @@ module.exports = {
   // entry: {
   //   app: './src/main.js'
   // },
-  entry: entries,
+  entry: utils.getEntries('./src/pages/**/*.js'),
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -46,7 +32,8 @@ module.exports = {
       'vue$': 'vue/dist/vue.common.js',
       'src': resolve('src'),
       'assets': resolve('src/assets'),
-      'components': resolve('src/components')
+      'components': resolve('src/components'),
+      'module': resolve('src/module')
     }
   },
   module: {

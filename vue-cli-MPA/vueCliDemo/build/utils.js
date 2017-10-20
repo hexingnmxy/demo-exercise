@@ -63,7 +63,19 @@ exports.styleLoaders = function (options) {
   }
   return output
 }
-
+exports.getEntries = function(globPath) {
+ var entries = {},
+  basename, tmp, pathname;
+ 
+ glob.sync(globPath).forEach(function (entry,index, array) {
+  if(entry.split('/').length == globPath.split('/').length){
+      basename = path.basename(entry, path.extname(entry));
+      pathname = basename.split("_")[0]; //index_main.js得到index
+      entries[pathname] = entry;
+  }
+ });
+ return entries;
+}
 
 // exports.getEntries = function (globPath) {
 //         var entries = {}
