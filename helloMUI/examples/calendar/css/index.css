@@ -3,6 +3,10 @@
 .grid{
 	width: 94%;
 	margin: 0 auto;
+	box-sizing: content-box;
+}
+.calenda{
+	box-sizing: content-box;
 }
 .header-main{
     width: 100%;
@@ -10,11 +14,12 @@
     top: 0;
     left: 0;
     z-index: 10;
+    box-sizing: content-box;
 }
 .header{
-	background: #DA5751;
+	background: #007aff;
 	height: 44px;
-	border-bottom: 1px solid #f07575;
+	border-bottom: 1px solid #90bdee;
 	width: 94%;
 	padding: 0 3%;
 	display: flex;
@@ -23,6 +28,7 @@
     flex-wrap: wrap;
     align-items: center;
     color: #fff;
+    box-sizing: content-box;
    /* position: fixed;
     top: 0;
     left: 0;
@@ -93,10 +99,11 @@
 /*start day*/
 .content{
     padding-top: 1.89rem;
+    background: white;
 }
 .day{
 	height: .77rem;
-	background: #DA5751;
+	background: #007aff;
 	color: #fff;
 }
 .day .grid{
@@ -170,6 +177,7 @@
 }
 .day-left p em{
 	font-size: .15rem;
+	color:white;
 }
 .day-left p i{
 	margin-top: .01rem;
@@ -187,6 +195,7 @@
     display: -ms-flexbox;
     align-items: center;
     -webkit-align-items: center;
+    box-sizing: content-box;
 }
 .day-right .yun span{
     display: inline-block;
@@ -264,6 +273,7 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     height: .48rem;
+    box-sizing: content-box;
 }
 .week ul li{
     display: flex;
@@ -297,6 +307,7 @@
     -webkit-flex-wrap: wrap;
 }
 .tables tbody tr td{
+	box-sizing: content-box;
     border: 2px solid #fff;
     flex: 0;
     flex-grow: 0;
@@ -325,12 +336,13 @@
 	text-align: center;
 	height: .58rem;
 	margin-bottom: .08rem;
+	box-sizing: content-box;
 }
 tr .not_this{
 	color: #ccc !important;
 }
 .today{
-	background: #ec5252;
+	background: #90bdee;
 	color: #fff;
     border-radius: 8px;
 }
@@ -338,8 +350,8 @@ tr .not_this{
 	border: 2px solid #f20 !important;
     border-radius: 8px;
 }
-tr td:first-child{color: #f00;}
-tr td:last-child{color: #f00;}
+tr td:first-child{color: #90bdee;}
+tr td:last-child{color: #90bdee;}
 
 td{position: relative;}
 td .fangjia{

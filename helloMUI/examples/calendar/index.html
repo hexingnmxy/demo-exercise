@@ -7,7 +7,7 @@
     	<meta content="yes" name="apple-touch-fullscreen">
 	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<title>j农历的万年历插件</title>
-	<!--<link rel="stylesheet" href="../../css/mui.min.css">-->
+	<link rel="stylesheet" href="../../css/mui.min.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
 	<link rel="stylesheet" href="css/common.css">
@@ -746,7 +746,7 @@
 	            var ly = LunarDate.GetLunarDayDetail(lb, lm, bday);
 	            var jq = getjq(lb, lm, bday);
 	            if (jq) {
-	                ly = '<font color="#00b7ec">' + jq;
+	                ly = '<font color="#f00">' + jq;
 	            }
 	            var jd = "";
 	            var hb = lb + "-" + lm + "-" + bday;
@@ -762,7 +762,7 @@
 	            var ly = LunarDate.GetLunarDayDetail(b, c, i);
 	            var jq = getjq(b, c, i);
 	            if (jq) {
-	                ly = '<font color="#00b7ec">' + jq;
+	                ly = '<font color="#f00">' + jq;
 	            }
 	            var jd = "";
 	            var hb = b + "-" + c + "-" + i;
@@ -786,7 +786,7 @@
 	                var ly = LunarDate.GetLunarDayDetail(xb, xm, i);
 	                var jq = getjq(xb, xm, i);
 	                if (jq) {
-	                    ly = '<font color="#00b7ec">' + jq;
+	                    ly = '<font color="#f00">' + jq;
 	                }
 	                var jd = "";
 	                var hb = xb + "-" + xm + "-" + i;
