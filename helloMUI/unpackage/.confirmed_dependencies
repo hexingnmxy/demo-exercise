@@ -1,0 +1,130 @@
+{
+	"examples/info.html": {
+		"resources": [
+			"images/qrcode.png"
+		]
+	},
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/update.js",
+			"js/mui.js"
+		],
+		"refer": [
+			"examples/info.html",
+			"index-menu.html",
+			"examples/im-chat.html",
+			"examples/echarts.html",
+			"examples/badges.html",
+			"examples/buttons.html",
+			"examples/guide.html",
+			"examples/dtpicker.html",
+			"examples/picker.html",
+			"examples/numbox.html",
+			"examples/media-list.html",
+			"examples/date.html",
+			"examples/calendar/index.html"
+		]
+	},
+	"index-menu.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	},
+	"examples/im-chat.html": {
+		"resources": [
+			"js/mui.imageViewer.js",
+			"images/logo.png",
+			"css/app.css",
+			"css/mui.imageviewer.css",
+			"js/arttmpl.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"examples/echarts.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"libs/echarts-all.js"
+		]
+	},
+	"examples/buttons.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"examples/guide.html": {
+		"resources": [
+			"js/mui.min.js"
+		]
+	},
+	"examples/dtpicker.html": {
+		"resources": [
+			"js/mui.picker.min.js",
+			"css/app.css",
+			"css/mui.picker.min.css",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	},
+	"examples/picker.html": {
+		"resources": [
+			"js/mui.picker.js",
+			"css/app.css",
+			"js/mui.poppicker.js",
+			"css/mui.min.css",
+			"js/city.data.js",
+			"css/mui.poppicker.css",
+			"css/mui.picker.css",
+			"js/city.data-3.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf"
+		]
+	},
+	"examples/numbox.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/app.css",
+			"css/mui.min.css"
+		]
+	},
+	"examples/media-list.html": {
+		"resources": [
+			"images/cbd.jpg",
+			"images/yuantiao.jpg",
+			"images/muwu.jpg",
+			"js/mui.min.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/shuijiao.jpg"
+		]
+	},
+	"examples/date.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"examples/calendar/index.html": {
+		"resources": [
+			"examples/calendar/js/swiper.js",
+			"examples/calendar/js/common.js",
+			"examples/calendar/images/calendar_bottom.png",
+			"examples/calendar/css/index.css",
+			"examples/calendar/css/htmleaf-demo.css",
+			"examples/calendar/css/common.css",
+			"examples/calendar/css/normalize.css",
+			"examples/calendar/css/swiper-3.3.1.min.css"
+		]
+	}
+}
