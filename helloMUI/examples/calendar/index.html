@@ -86,7 +86,7 @@
                         <div class="swiper-slide">
                             <table id="now3" class="tables">
                                 <tr class="">
-                                    <td class="list"><i>12</i><em>中秋</em></td>
+                                    <td class="list"><i></i><em></em></td>
                                 </tr>
                             </table>
                         </div>
@@ -98,11 +98,22 @@
         </section>
         <!-- end content -->
     </section>
-	
+	<script type='text/template' id='month-calender'>
+		<tr>
+			<td data_y="2017" data_m="11" data_d="27" class="list not_this js_up"><i>27</i><em>初十</em></td>
+			<td data_y="2017" data_m="11" data_d="27" class="list not_this js_up"><i>27</i><em>初十</em></td>
+			<td data_y="2017" data_m="11" data_d="27" class="list not_this js_up"><i>27</i><em>初十</em></td>
+			<td data_y="2017" data_m="11" data_d="27" class="list not_this js_up"><i>27</i><em>初十</em></td>
+			<td data_y="2017" data_m="11" data_d="27" class="list not_this js_up"><i>27</i><em>初十</em></td>
+			<td data_y="2017" data_m="11" data_d="27" class="list not_this js_up"><i>27</i><em>初十</em></td>
+			<td data_y="2017" data_m="11" data_d="27" class="list not_this js_up"><i>27</i><em>初十</em></td>
+		</tr>
+	</script>
 	<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
 	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
 	<script type="text/javascript" src="js/swiper.js"></script>
 	<script type="text/javascript" src="js/common.js"></script>
+	<script src="js/underscore.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		//全局的年月日，适用于任何时候获取今天的年月日。（很重要）
 	    var sev_m, sev_y, sev_d, active = 3;
@@ -455,11 +466,9 @@
 	        });
 	    }
 		function get_first(a,b,c,d,e){
-			console.log(a);
-			console.log(b);
-			console.log(c);
-			console.log(d);
-			console.log(e);
+			var _str = $('#month-calender').html();
+			console.log(_str)
+			document.getElementById(e).innerHTML = _str;
 						
 		}
 //	    function get_first(a, b, c, d, e) {
