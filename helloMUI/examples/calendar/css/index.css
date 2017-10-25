@@ -337,6 +337,8 @@
 	height: .58rem;
 	margin-bottom: .08rem;
 	box-sizing: content-box;
+	display: flex;
+	justify-content: space-around;
 }
 tr .not_this{
 	color: #ccc !important;
@@ -669,3 +671,9 @@ td .shangban{
 
 
 .back2{background:url(../images/back.png) center no-repeat;background-size: 0.12rem 0.2rem;}
+.swiper-container tbody tr:nth-last-child(1){
+	/*justify-content: flex-start !important;*/
+}
+.swiper-container tbody tr:nth-last-child(1) td{
+	
+	}
