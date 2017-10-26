@@ -519,7 +519,10 @@
 			var compiled = _.template(document.getElementById("month-calender").innerHTML);
 			var data = arrMonthDays(getMonthDayArray(b,c));
 			var html = compiled(data);
-			document.getElementById(e).innerHTML = html;
+			setTimeout(function(){
+				document.getElementById(e).innerHTML = html;
+			},10)
+			
 			bind_click(e);			
 		}
 	    function bind_click(a) {
