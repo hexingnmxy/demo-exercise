@@ -1047,7 +1047,8 @@
 					"css/app.css",
 					"css/mui.min.css",
 					"examples/calendar/js/underscore.js",
-					"css/mui.picker.min.css"
+					"css/mui.picker.min.css",
+					"js/mui.min.js"
 				],
 				"refer": [],
 				"priority": 0

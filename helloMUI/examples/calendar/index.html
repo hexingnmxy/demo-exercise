@@ -102,7 +102,7 @@
 		<% _.each(obj, function(e, i, a){ %>
 	      <tr>
 			<% _.each(e, function(ex, ei, ea){ %>
-				<td  data_y=<%= ex?ex.currentDay.split('-')[0]:''%> data_m=<%= ex?ex.currentDay.split('-')[1]:''%> data_d=<%= ex?ex.currentDay.split('-')[2]:''%> class="<%= ex&& new Date(ex.currentDay).toLocaleDateString() == new Date().toLocaleDateString()?'today list js_up':'list js_up'%>"><i><%= ex?ex.index:''%></i><em class=<%= ex&&ex.isJq?'_is_jq':''%>><%=ex?ex.day:''%></em></td>
+				<td  data_y="<%= ex?ex.currentDay.split('-')[0]:''%>" data_m="<%= ex?ex.currentDay.split('-')[1]:''%>" data_d="<%= ex?ex.currentDay.split('-')[2]:''%>"  class="<%= ex&& new Date(ex.currentDay).toLocaleDateString() == new Date().toLocaleDateString()?'today list js_up':ex?'list js_up':'not_this'%>"><i><%= ex?ex.index:''%></i><em class=<%= ex&&ex.isJq?'_is_jq':''%>><%=ex?ex.day:''%></em></td>
    			 <% }) %>
 		</tr>
 	    <% }) %>
@@ -523,8 +523,8 @@
 			bind_click(e);			
 		}
 	    function bind_click(a) {
-	        $("#" + a).find("td").unbind("click");
-	        $("#" + a).find("td").each(function() {
+	        $("#" + a).find("td").not('.not_this').unbind("click");
+	        $("#" + a).find("td").not('.not_this').each(function() {
 	            if ($(this).hasClass('not_this')) {
 	                $(this).click(function() {
 	                    jump($(this).attr('data_y'), $(this).attr('data_m'), $(this).attr('data_d'));
