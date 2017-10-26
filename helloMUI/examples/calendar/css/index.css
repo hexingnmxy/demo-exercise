@@ -34,6 +34,9 @@
     left: 0;
     z-index: 10;*/
 }
+._is_jq{
+	color:#f51f18;
+}
 .header .child.return{
 	display: flex;
     display: -webkit-flex;

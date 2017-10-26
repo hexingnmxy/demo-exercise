@@ -66,7 +66,7 @@
                         <div class="swiper-slide">
                             <table id="now1" class="tables">
                                 <tr class="">
-                                    <td class=" list"><i>12</i><em>中秋</em></td>
+                                    <td class=" list"><i></i><em></em></td>
                                 </tr>
                             </table>
                         </div>
@@ -99,15 +99,13 @@
         <!-- end content -->
     </section>
 	<script type='text/template' id='month-calender'>
-		<tr>
-			<td data_y="2017" data_m="11" data_d="27" class="list not_this js_up"><i>27</i><em>初十</em></td>
-			<td data_y="2017" data_m="11" data_d="27" class="list not_this js_up"><i>27</i><em>初十</em></td>
-			<td data_y="2017" data_m="11" data_d="27" class="list not_this js_up"><i>27</i><em>初十</em></td>
-			<td data_y="2017" data_m="11" data_d="27" class="list not_this js_up"><i>27</i><em>初十</em></td>
-			<td data_y="2017" data_m="11" data_d="27" class="list not_this js_up"><i>27</i><em>初十</em></td>
-			<td data_y="2017" data_m="11" data_d="27" class="list not_this js_up"><i>27</i><em>初十</em></td>
-			<td data_y="2017" data_m="11" data_d="27" class="list not_this js_up"><i>27</i><em>初十</em></td>
+		<% _.each(obj, function(e, i, a){ %>
+	      <tr>
+			<% _.each(e, function(ex, ei, ea){ %>
+				<td  data_y=<%= ex?ex.currentDay.split('-')[0]:''%> data_m=<%= ex?ex.currentDay.split('-')[1]:''%> data_d=<%= ex?ex.currentDay.split('-')[2]:''%> class="<%= ex&& new Date(ex.currentDay).toLocaleDateString() == new Date().toLocaleDateString()?'today list js_up':'list js_up'%>"><i><%= ex?ex.index:''%></i><em class=<%= ex&&ex.isJq?'_is_jq':''%>><%=ex?ex.day:''%></em></td>
+   			 <% }) %>
 		</tr>
+	    <% }) %>
 	</script>
 	<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
 	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
@@ -466,123 +464,64 @@
 	        });
 	    }
 		function get_first(a,b,c,d,e){
-			var _str = $('#month-calender').html();
-			console.log(_str)
-			document.getElementById(e).innerHTML = _str;
-						
+			function getWeekDay(currentDay){
+			  var weekday=new Array(7);
+			      weekday[0]="星期日"
+			      weekday[1]="星期一"
+			      weekday[2]="星期二"
+			      weekday[3]="星期三"
+			      weekday[4]="星期四"
+			      weekday[5]="星期五"
+			      weekday[6]="星期六"
+			  return weekday[currentDay.getDay()]
+			}
+			
+			function getMonthDayArray(year,month){
+			    var d = new Date(year*1,month*1,0).getDate();
+			    var tempArr = new Array(d);
+			    for (var i=0;i<d;i++){
+			      var _day = year+'-'+month+'-'+(i*1+1);
+			      tempArr[i] = {
+			      	isJq:getjq(year,month,i*1+1)?true:false,
+			      	currentDay:_day,
+			        day:getjq(year,month,i*1+1) || LunarDate.GetLunarDayDetail(year,month,i*1+1),
+			        weekday:getWeekDay(new Date(_day)),
+			        index:(i*1+1)
+			      }
+			    };
+			    return tempArr;
+			}
+			
+			function arrMonthDays(arr){
+			  var tempArr = [];
+			  var Arr = [];
+			  for(var i=0;i<arr.length;i++){
+			    if(arr[i].weekday == "星期六" || i==arr.length-1){
+			        tempArr.push(arr[i])
+			        Arr.push(tempArr);
+			        tempArr = [];
+			    }else{
+			        tempArr.push(arr[i])
+			    }
+			  }
+			  if(Arr[0].length<7){
+			  	var tempArr_1 = new Array(7-Arr[0].length);
+			  	Arr[0] = tempArr_1.concat(Arr[0])
+			  }
+			  if(Arr[Arr.length-1].length<7){
+			  	var _length_2 = 7-Arr[Arr.length-1].length
+			  	var tempArr_2 = new Array(_length_2);
+			  	 Arr[Arr.length-1] = Arr[Arr.length-1].concat(tempArr_2)
+			  }
+			  return Arr;
+			};
+			
+			var compiled = _.template(document.getElementById("month-calender").innerHTML);
+			var data = arrMonthDays(getMonthDayArray(b,c));
+			var html = compiled(data);
+			document.getElementById(e).innerHTML = html;
+			bind_click(e);			
 		}
-//	    function get_first(a, b, c, d, e) {
-//	    	console.log(e)
-//	        var str = '<tr>';
-//	        if ((c - 2) < 0) {
-//	            var ldays = 31;
-//	            var lm = 12;
-//	            var lb = b - 1;
-//	        } else {
-//	            var ldays = yl[c - 2];
-//	            var lm = c - 1;
-//	            var lb = b;
-//	        }
-//
-//	        if (c == 12) {
-//	            var xdays = 31;
-//	            var xm = 1;
-//	            var xb = b + 1;
-//	        } else {
-//	            var xdays = yl[c];
-//	            var xm = c + 1;
-//	            var xb = b;
-//	        }
-//
-//	        if (ldays == 28) {
-//	            if ((lb % 4 == 0 && lb % 100 != 0) || (lb % 100 == 0 && lb % 400 == 0)) {
-//	                ldays = 29;
-//	            }
-//	        }
-//
-//	        if (xdays == 28) {
-//	            if ((xb % 4 == 0 && xb % 100 != 0) || (xb % 100 == 0 && xb % 400 == 0)) {
-//	                xdays = 29;
-//	            }
-//	        }
-//	        var dd;
-//	        if (yl[c - 1] == 28) {
-//	            if ((b % 4 == 0 && b % 100 != 0) || (b % 100 == 0 && b % 400 == 0)) {
-//	                dd = 29;
-//	            } else {
-//	                dd = 28;
-//	            }
-//	        } else {
-//	            dd = yl[c - 1];
-//	        }
-//
-//	        var num = 1;
-//
-//	        for (var i = a; i > 0; i--) {
-//	            var bday = ldays - i + 1;
-//	            var ly = LunarDate.GetLunarDayDetail(lb, lm, bday);
-//	            var jq = getjq(lb, lm, bday);
-//	            if (jq) {
-//	                ly = '<font color="#f00">' + jq;
-//	            }
-//	            var jd = "";
-//	            var hb = lb + "-" + lm + "-" + bday;
-//	            str += ' <td data_y="' + lb + '" data_m="' + lm + '" data_d="' + bday + '" class="list not_this js_up"><i>' + bday + '</i><em>' + ly + '</em>' + jd + '</td>';
-//	            if (num % 7 == 0) {
-//	                str += '</tr><tr>';
-//	            }
-//	            num++;
-//	        }
-//
-//	        for (var i = 1; i <= dd; i++) {
-//	            var bday = ldays - i + 1;
-//	            var ly = LunarDate.GetLunarDayDetail(b, c, i);
-//	            var jq = getjq(b, c, i);
-//	            if (jq) {
-//	                ly = '<font color="#f00">' + jq;
-//	            }
-//	            var jd = "";
-//	            var hb = b + "-" + c + "-" + i;
-//	            if (new Date().getDate() == i && b == new Date().getFullYear() && c == (new Date().getMonth() + 1)) {
-//
-//	                str += ' <td data_y="' + b + '" data_m="' + c + '" data_d="' + i + '" class="list today"><i>' + i + '</i><em>' + ly + '</em>' + jd + '</td>';
-//	            } else {
-//	                str += ' <td data_y="' + b + '" data_m="' + c + '" data_d="' + i + '" class="list"><i>' + i + '</i><em>' + ly + '</em>' + jd + '</td>';
-//	            }
-//
-//	            if (num % 7 == 0) {
-//	                str += '</tr><tr>';
-//	            }
-//	            num++;
-//	        }
-//
-//	         var last = 42 - a - dd;
-//	         if(last<=6){
-//	            for (var i = 1; i <= last; i++) {
-//	                var ly = LunarDate.GetLunarDayDetail(xb, xm, i);
-//	                var jq = getjq(xb, xm, i);
-//	                if (jq) {
-//	                    ly = '<font color="#f00">' + jq;
-//	                }
-//	                var jd = "";
-//	                var hb = xb + "-" + xm + "-" + i;
-//	                str += ' <td data_y="' + xb + '" data_m="' + xm + '" data_d="' + i + '" class="list not_this js_down"><i>' + i + '</i><em>' + ly + '</em>' + jd + '</td>';
-//	                if (num % 7 == 0) {
-//	                    str += '</tr><tr>';
-//	                }else{
-//	                	
-//	                }
-//	                num++;
-//	            }
-//	        }
-//	        if(str.substring(str.length-4,str.length)=="<tr>"){
-//	            str = str.substring(0,str.length-4);
-//	        }
-//	        
-//	        document.getElementById(e).innerHTML = str;
-//	        bind_click(e);
-//	    }
-
 	    function bind_click(a) {
 	        $("#" + a).find("td").unbind("click");
 	        $("#" + a).find("td").each(function() {
