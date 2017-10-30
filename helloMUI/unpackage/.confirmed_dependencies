@@ -25,7 +25,8 @@
 			"examples/numbox.html",
 			"examples/media-list.html",
 			"examples/date.html",
-			"examples/calendar/index.html"
+			"examples/calendar/index.html",
+			"examples/rate/index.html"
 		]
 	},
 	"index-menu.html": {
@@ -131,6 +132,16 @@
 			"examples/calendar/js/underscore.js",
 			"css/mui.picker.min.css",
 			"js/mui.min.js"
+		]
+	},
+	"examples/rate/index.html": {
+		"resources": [
+			"examples/rate/src/css/star-rating-svg.css",
+			"examples/rate/css/normalize.css",
+			"examples/rate/src/jquery.star-rating-svg.js",
+			"examples/rate/css/htmleaf-demo.css",
+			"examples/rate/css/demo.css",
+			"js/jquery.js"
 		]
 	}
 }
