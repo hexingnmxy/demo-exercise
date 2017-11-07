@@ -2,7 +2,8 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
-var glob = require('glob')
+var glob = require('glob');
+var webpack = require("webpack");
 
 // console.log(process.env.NODE_ENV)
 
@@ -79,4 +80,11 @@ module.exports = {
        }
     ]
   }
+  // ,
+  // plugins: [
+   // new webpack.ProvidePlugin({
+   //     jQuery: "jquery",
+   //     $: "jquery"
+   // })
+  // ]
 }

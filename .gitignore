@@ -4,6 +4,7 @@ imooc-happymall/dist/
 .idea/
 vue-cli-MPA/MPA-demo/node_modules/
 vue-cli-MPA/vueCliDemo/node_modules/
+Electron/my-project/node_modules/
 vue-cli-MPA/vueCliDemo/dist/
 vue-cli-MPA/vue-multi-page-master/node_modules/
 koa2-server/node_modules/

@@ -74,7 +74,6 @@ exports.getEntries = function(globPath) {
       entries[pathname] = entry;
   }
  });
- console.log(entries)
  return entries;
 }
 

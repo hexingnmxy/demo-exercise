@@ -20,12 +20,12 @@ module.exports = merge(baseWebpackConfig, {
   // cheap-module-eval-source-map is faster for development
   devtool: '#cheap-module-eval-source-map',
   plugins: [
-      new vConsolePlugin({
+  new vConsolePlugin({
             enable: true // 发布代码前记得改回 false
-        }),
-    new webpack.DefinePlugin({
-      'process.env': config.dev.env
-    }),
+          }),
+  new webpack.DefinePlugin({
+    'process.env': config.dev.env
+  }),
     // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
     // new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
@@ -36,13 +36,13 @@ module.exports = merge(baseWebpackConfig, {
     //   inject: true
     // }),
     new FriendlyErrorsPlugin(),
-  ]
-})
+    ]
+  })
 
 
- 
+
 var pages = utils.getEntries('src/pages/**/*.html');
- 
+
 for (var pathname in pages) {
  // 配置生成的html文件，定义路径等
  var conf = {
@@ -50,7 +50,7 @@ for (var pathname in pages) {
   template: pages[pathname],  // 模板路径
   inject: true,       // js插入位置
   chunks:[pathname]
- };
- module.exports.plugins.push(new HtmlWebpackPlugin(conf));
+};
+module.exports.plugins.push(new HtmlWebpackPlugin(conf));
 }
 
