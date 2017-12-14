@@ -39,8 +39,6 @@ const device = {
 					resolve(obj)
 				});
 			}, function(e){
-				//拍照失败
-				//{code:''0003',res:e.message};
 				const obj = {code:'0003',res:e.message};
 				resolve(obj)
 			}, {filename:'_doc/camera/',index:1});

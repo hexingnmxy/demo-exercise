@@ -188,7 +188,8 @@
 					"examples/media-list.html",
 					"examples/date.html",
 					"examples/calendar/index.html",
-					"examples/rate/index.html"
+					"examples/rate/index.html",
+					"examples/input.html"
 				],
 				"priority": 0
 			},
